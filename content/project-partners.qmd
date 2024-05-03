@@ -2,7 +2,7 @@
 
 ## Project Partners {.unnumbered}
 
-## Planning Team {.unnumbered}
+### Planning Team {.unnumbered}
 
 ```{r echo = FALSE}
 #| label: tbl-planteam
@@ -19,7 +19,7 @@ ft <- set_caption(ft)
 ft |> autofit() 
 ```
 
-## Key Actors {.unnumbered}
+### Key Actors {.unnumbered}
 
 ```{r keyact, echo = FALSE, results = 'asis'}
 #| label: tbl-keyact

@@ -58,7 +58,7 @@ def barrier_severity(barrier_type):
 
 def watershed_connectivity(habitat_type):
 
-    request = 'https://cabd-pro.cwf-fcf.org/bcfishpass/functions/postgisftw.wcrp_habitat_connectivity_status/items.json?watershed_group_code=LNIC&barrier_type=' + habitat_type
+    request = 'https://cabd-pro.cwf-fcf.org/bcfishpass/functions/postgisftw.wcrp_habitat_connectivity_status/items.json?watershed_group_code=LNIC&habitat_type=' + habitat_type
 
     response_api = requests.get(request)
     parse = response_api.text
@@ -82,11 +82,16 @@ sum_road = barrier_severity('ROAD, RESOURCE/OTHER')[1] + barrier_severity('ROAD,
 ```
 
 ```{python echo=FALSE}
-#| label: tbl-connectivity
-#| tbl-cap: "Connectivity status assessment for (a) linear habitat (spawning and rearing) and (b) overwintering habitat in the Horsefly River watershed. The Available Habitat KEA is evaluated by dividing the length of linear habitat that is currently accessible to target species by the total length of all linear habitat in the watershed. The Available Overwintering Habitat KEA is evaluated as the sum of all areal overwintering habitat that is accessible to target species."
 #| warning: false
 #| echo: false
 
+#| label: tbl-connectivity
+#| tbl-cap: "Connectivity status assessment for thermal refuge (a), spawning (b), and rearing (c) habitat in the Lower Nicola River watershed. The Accessible Spawning Habitat and Accessible Rearing Habitat KEAs are evaluated by dividing the length of linear habitat (of each type) that is currently accessible to target species by the total length of all linear habitat (of each type) in the watershed."
+#| warning: false
+#| echo: false
+
+
+#creating table 7
 import pandas as pd
 import numpy as np
 import matplotlib as mpl
@@ -94,57 +99,9 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-df = pd.DataFrame({"Target Species":["Andromous Salmon"," "],
-                   "KEA":["Available Habitat"," "],
-                   "Indicator":["% of total linear habitat","Current Status:"],
-                   "Poor":["<80%"," "],
-                   "Fair":["  "," "],
-                   "Good":["81-90%"," "],
-                   "Very Good":[">90%", watershed_connectivity("ALL")]
-                   })
-
-
-def highlighttab7(val):
-    red = '#ff0000;'
-    yellow = '#ffff00;'
-    lgreen = '#92d050;'
-    dgreen = '#03853e;'
-
-    if val=="<80%" : color = red
-    elif val[0:].isdigit() and int(val) < 80 : color = red
-    elif val=="  ": color = yellow
-    elif val=="81-90%"  : color = lgreen
-    elif val[0:].isdigit() and (int(val) >= 80 and int(val) < 90) : color = lgreen 
-    elif val ==">90%": color = dgreen
-    elif val[0:].isdigit() and int(val) >= 90 : color = dgreen 
-    elif val == "Current Status:" : return "font-weight: bold"
-    else: color = 'white'
-    return 'background-color: %s' % color
-
-df.style.applymap(highlighttab7).set_table_styles(
-   [{
-       'selector': 'th',
-       'props': [('background-color', '#008270'),('text-align', 'left')]
-   }]).hide()
-```
-
-**Comments:** Indicator rating definitions are based on the consensus decisions of the planning team, including the decision not to define Fair. The current status is based on the CWF Barrier Prioritization Model output, which is current as of March 2022.
-
-```{python echo=FALSE}
-#| warning: false
-#| echo: false
-
-#creating table 7
-import pandas as pd
-import numpy as np
-import matplotlib as mpl
-
-
-warnings.filterwarnings('ignore')
-
 df = pd.DataFrame({"Target Species":["Andromous Salmon",""],
-                   "KEA":["Available Overwintering Habitat",""],
-                   "Indicator":["Total Area (m2) of overwintering habitat accessible","Current Status:"],
+                   "KEA":["Available off-channel Thermal Refuge",""],
+                   "Indicator":["Total Area (m2) of off-channel thermal refuge accessible","Current Status:"],
                    "Poor":["?",""],
                    "Fair":[" ?",""],
                    "Good":["? ",""],
@@ -176,15 +133,107 @@ df.style.applymap(highlighttab7b).set_table_styles(
 
 
 ```
-
 **Comments:** No baseline data exists on the extent of overwintering habitat in the watershed. A priority action is included in the Operational Plan (strategy 2.3) to develop a habitat layer, and this will be used to inform this connectivity status assessment in the future.
+
+```{python echo=FALSE}
+
+import pandas as pd
+import numpy as np
+import matplotlib as mpl
+
+
+warnings.filterwarnings('ignore')
+
+df = pd.DataFrame({"Target Species":["Target Species"," "],
+                   "KEA":["Available Spawning Habitat"," "],
+                   "Indicator":["% of total linear spawning habitat accessible","Current Status:"],
+                   "Poor":["<25%"," "],
+                   "Fair":["25-50%"," "],
+                   "Good":["51-75%"," "],
+                   "Very Good":[">75%", watershed_connectivity("SPAWNING")]
+                   })
+
+
+def highlighttab7(val):
+    red = '#ff0000;'
+    yellow = '#ffff00;'
+    lgreen = '#92d050;'
+    dgreen = '#03853e;'
+
+    if val=="<25%" : color = red
+    elif val[0:].isdigit() and int(val) <25 : color = red
+    elif val=="25-50%": color = yellow
+    elif val[0:].isdigit() and (int(val) >= 25 and int(val) < 50) : color = yellow
+    elif val=="51-75%"  : color = lgreen
+    elif val[0:].isdigit() and (int(val) >= 50 and int(val) < 75) : color = lgreen 
+    elif val ==">75%": color = dgreen
+    elif val[0:].isdigit() and int(val) >= 75 : color = dgreen 
+    elif val == "Current Status:" : return "font-weight: bold"
+    else: color = 'white'
+    return 'background-color: %s' % color
+
+df.style.applymap(highlighttab7).set_table_styles(
+   [{
+       'selector': 'th',
+       'props': [('background-color', '#008270'),('text-align', 'left')]
+   }]).hide()
+   
+```
+
+**Comments:** Indicator rating definitions are based on the consensus decisions of the planning team, including the decision not to define Fair. The current status is based on the CWF Barrier Prioritization Model output, which is current as of March 2022.
+
+```{python echo=FALSE}
+import pandas as pd
+import numpy as np
+import matplotlib as mpl
+
+
+warnings.filterwarnings('ignore')
+
+df = pd.DataFrame({"Target Species":["Anadromous Salmonids"," "],
+                   "KEA":["Available Rearing Habitat"," "],
+                   "Indicator":["% of total linear rearing habitat accessible","Current Status:"],
+                   "Poor":["<25%"," "],
+                   "Fair":["25-50%"," "],
+                   "Good":["51-75%"," "],
+                   "Very Good":[">75%", watershed_connectivity("REARING")]
+                   })
+
+
+def highlighttab7(val):
+    red = '#ff0000;'
+    yellow = '#ffff00;'
+    lgreen = '#92d050;'
+    dgreen = '#03853e;'
+
+    if val=="<25%" : color = red
+    elif val[0:].isdigit() and int(val) <25 : color = red
+    elif val=="25-50%": color = yellow
+    elif val[0:].isdigit() and (int(val) >= 25 and int(val) < 50) : color = yellow
+    elif val=="51-75%"  : color = lgreen
+    elif val[0:].isdigit() and (int(val) >= 50 and int(val) < 75) : color = lgreen 
+    elif val ==">75%": color = dgreen
+    elif val[0:].isdigit() and int(val) >= 75 : color = dgreen 
+    elif val == "Current Status:" : return "font-weight: bold"
+    else: color = 'white'
+    return 'background-color: %s' % color
+
+df.style.applymap(highlighttab7).set_table_styles(
+   [{
+       'selector': 'th',
+       'props': [('background-color', '#008270'),('text-align', 'left')]
+   }]).hide()
+```
+
+
+
 
 
 ## Goals {-}
 
 ```{python echo=FALSE}
 #| label: tbl-goals
-#| tbl-cap: "Goals to improve (1) spawning and rearing and (2) overwintering habitat connectivity for target species in the Horsefly River watershed over the lifespan of the WCRP (2021-2040). The goals were established through discussions with the planning team and represent the resulting desired state of connectivity in the watershed. The goals are subject to change as more information and data are collected over the course of the plan timeline (e.g., the current connectivity status is updated based on barrier field assessments)."
+#| tbl-cap: "Goals to improve (1) off-channel thermal refuge, (2) spawning, and (3) rearing habitat connectivity for target species in the Lower Nicola River watershed over the lifespan of the WCRP (2021-2031). The goals were established through discussions with the planning team and represent the resulting desired state of connectivity in the watershed. The goals are subject to change as more information and data are collected over the course of the plan timeline (e.g., the current connectivity status is updated based on barrier field assessments)."
 #| warning: false
 #| echo: false
 
@@ -195,9 +244,10 @@ warnings.filterwarnings('ignore')
 import pandas as pd
 import numpy as np
 
-df = pd.DataFrame({"Goal #": [1,2],
-                   "Goal": ["By 2040, the percent (%) of total linear habitat accessible to anadromous salmon will increase from 94% to 96% within the Horsefly River watershed (i.e., reconnect at least 11.7 km of habitat).",
-                            "By 2024, the total area of overwintering habitat accessible to Anadromous Salmon will increase by 1,500 m2 within the Horsefly River watershed. "]
+df = pd.DataFrame({"Goal #": [1,2,3],
+                   "Goal": ["By 2031, the total area of groundwater-serviced off-channel thermal refuge accessible to anadromous salmonids will increase by 6,000 m2 within the Lower Nicola River watershed. ",
+                            "By 2025, the % of total linear spawning habitat accessible to anadromous salmonids will not decrease below 96% within the Lower Nicola River watershed.  ",
+                            "By 2031, the % of total linear rearing habitat accessible to anadromous salmonids will increase from 83% to 90% within the Lower Nicola River watershed." ]
                     })
 
 data = df.style.hide().set_properties(**{'text-align': 'left'})
