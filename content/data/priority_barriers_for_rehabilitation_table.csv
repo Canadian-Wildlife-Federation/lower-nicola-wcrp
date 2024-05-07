@@ -1,7 +1,7 @@
-﻿ID,Stream Name,Road name,Barrier owner,Barrier type,PSCIS status,Barrier status,Number of downstream barriers,Spawning habitat blocked-all species (km),Rearing habitat blocked-all species (km),Priority status,Comments
-1011301807,Brook Creek,Kettle Valley Railway,Kettle Valley Railway Association,Resource road crossing, Assessed,P,3,4.88,4.88,Short,Remediate in 2023 if continues to be a low flow barrier
-197039,Kwinshatin Creek,Coldwater Road,Coldwater Band,Municipal road crossing,Assessed,B,1,0,0.43,Medium,Remediation deferred until work from winter storms complete
-197889,Skuhun Creek,Highway 8,MOTI,Concrete bridge apron,Assessed,B,1,2.37,3.39,Short,"MOTI plans to do some remediation work as part of Highway 8 flood repairs, aiming for 2023 instream work window"
-N/a,Skuhun Creek,N/a,N/a - natural feature,Perched stream mouth,Assessed,B,0,0,0.68,Remediated,Stream mouth perched following November storms. Remediated in early 2022.
-N/a,Clapperton Creek,N/a (dam),Orphaned,Dam,Assessed,B,0,6.36,7.38,Ready to advance to design,Barrier owner determined to be orphaned. Known Steelhead spawning stream. 
-,,,,,,,Total Gain:,13.61,16.76,,
+﻿Stream Name,Road Name,PSCIS Status,Barrier Status,Barrier Type,Spawning Habitat Blocked (km),Rearing Habitat Blocked (km),Current Status,Next Steps,Lead for Next Steps,Reason
+Clapperton Creek,n/a (adjacent to Mill Creek Road),ASSESSED,BARRIER,DAM,TBD,TBD,Preliminary design,Complete detailed design,"CWF, LNIB ","Important Steelhead, Chinook, Coho stream"
+Kwinshatin Creek,Colddwater Road,ASSESSED,BARRIER,ROAD,0,0.43,Habitat confirmation,Recommend removal from list OR advance to design,CWF,No suitable spawning habitat is present for salmon - only a couple of gravel pockets (<1 m² and ~20% fines) usable for RB opportunistic spawning were observed. No overwintering habitat was noted in the surveyed section. RB is common with sizes 70 - 200 mm. One fish exhibited hybridization characteristics with CT (large mandible and heavy spotting). Moderate habitat value for RB.
+Skuhun Creek,Highway 8,ASSESSED,BARRIER,ROAD,TBD,TBD,Complete,Backwater structure and reinforce banks,MOTI,Important Steelhead stream
+Skuhun Creek,n/a - stream mouth,ASSESSED,BARRIER,Mouth,all,all,Monitor,"Site being monitored for upcoming issues, and decide what should be done about the site","DFO, STC",Important Steelhead stream
+Brook Creek,KVR,ASSESSED,PASSABLE,ROAD,4.88,4.88,Passable,Recommend removal from list ,CWF,"Damaged bridge during 2021 flood - deck dropped by ~0.7 m. The debris jam ~70 m downstream is no longer a fish barrier. In the last two years, water flows caused downcutting under the jam and side channels around, passable to CO, ST, and RB at higher flows. The stream is passable to adult fish from the mouth. Only RB was captured in the stream. Moderate habitat value for RB and Important Migratory Corridor for CO and ST."
+,,,,,,,,,,

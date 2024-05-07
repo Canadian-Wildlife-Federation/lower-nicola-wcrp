@@ -186,7 +186,7 @@ ft |> autofit()
 
 ```{r deficient, echo = FALSE, results = 'asis'}
 #| label: tbl-intermediate
-#| tbl-cap: "Intermediate barrier list resulting from the barrier prioritization analysis in the Lower Nicola River watershed. The barriers on this list require further assessment and/or monitoring before being actively pursued for design and remediation. Barriers highlighted in the same colour represent sets of barriers that have been prioritized as a group because all must be remediated before their full connectivity gains are realized. In the Barrier Status column, P = potential barrier and B = confirmed barrier or partial barrier. All barrier assessment data are compiled from the BC Provincial Stream Crossing Inventory System."
+#| tbl-cap: "Intermediate barrier list resulting from the barrier prioritization analysis in the Lower Nicola River watershed. The barriers on this list require further assessment and/or monitoring before being actively pursued for design and remediation. All barrier assessment data are compiled from the BC Provincial Stream Crossing Inventory System."
 #| warning: false
 #| echo: false
 
@@ -207,7 +207,7 @@ ft |> autofit()
 
 ```{r priority, echo = FALSE, results = 'asis'}
 #| label: tbl-priority
-#| tbl-cap: "Priority barrier list resulting from the barrier prioritization analysis in the Lower Nicola River watershed. The barriers on this have been selected for proactive remediation. In the Barrier Status column, P = potential barrier and B = confirmed barrier or partial barrier. All barrier assessment data are compiled from the BC Provincial Stream Crossing Inventory System."
+#| tbl-cap: "Priority barrier list resulting from the barrier prioritization analysis in the Lower Nicola River watershed. The barriers on this have been selected for proactive remediation. All barrier assessment data are compiled from the BC Provincial Stream Crossing Inventory System."
 #| warning: false
 #| echo: false
 
@@ -229,7 +229,7 @@ ft |> autofit()
 <!--
 ```{python}
 #| label: tbl-remove1
-#| tbl-cap: "List of barriers that were prioritized as part of the first iteration of the intermediate barrier list (field assessments occurred during the 2021 field season) but were removed from consideration for pursual of proactive remediation following discussion with the planning team due to these structures not existing, being passable, not be associated with usable habitat, or deemed not feasible to remediate because of logistic considerations."
+#| tbl-cap: "List of barriers that were removed from consideration from first iteration of the intermediate barrier list (field assessments occurred during the 2021 field season). Removed following discussion with the planning team due to these structures not existing, being passable, not be associated with usable habitat, or deemed not feasible to remediate because of logistic considerations."
 #| warning: false
 #| echo: false
 #| 

@@ -66,7 +66,7 @@ data.set_table_styles(
 
 ```{r fund, echo = FALSE, results = 'asis'}
 #| label: tbl-fund
-#| tbl-cap: "Potential funding sources for plan implementation in the Horsefly River watershed. The Canadian Wildlife Federation and the planning team can coordinate proposal submission through these sources."
+#| tbl-cap: "Potential funding sources for plan implementation in the Lowe Nicola watershed. The Canadian Wildlife Federation and the planning team can coordinate proposal submission through these sources."
 #| warning: false
 
 library("flextable")
@@ -74,3 +74,21 @@ library("flextable")
 ```
 
 ## Annual Work Plan {.unnumbered}
+
+The Lower Nicola Indian Band, Nooaitch Band, and Scw’exmx Tribal Council completed in-depth barrier assessments and habitat confirmations at several sites (Stumbles, Kwinshatin, Brook, Murray Lake, Midday creeks) on the intermediate barriers list. In addition, initial results from CWF’s drone imagery project to identify thermal refugia were developed and reviewed at a working group meeting with program partners in 2023.
+
+
+```{r params, echo = FALSE, results = 'asis'}
+#| label: tbl-param
+#| tbl-cap: "Work plan for the Lower Nicola Watershed."
+#| warning: false
+
+library("flextable")
+
+data <- read.csv("data/work-plan.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- bg(ft, bg = "#008270", part = "header")
+ft <- color(ft, color = "white", part = "header")
+ft <- set_caption(ft)
+ft |> autofit() 
+```
