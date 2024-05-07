@@ -1,10 +1,5 @@
 # Data Download and Methods {-}
 
-## Modelled Anadromous Salmon Habitat Maps {-}
-
-High-resolution PDF maps of the Lower Nicola River watershed and model results can be accessed here. The watershed is divided into multiple map sheets to allow for detailed examination of modelled spawning and rearing habitat and priority barriers identified through this planning process. The locations of WCRP priority barriers and associated map sheet numbers are shown below. In each map sheet, priority barriers are symbolized using the following notation: ![label](images/priority-crossing-label.png)
-
-![Lower Nicola River watershed overview map identifying the portions of the watershed covered by each map sheet (grey squares) and the prioritized barriers on the intermediate barrier list (orange points; see Appendix C).](images/overview-map-lnic.png){#fig-over}
 
 ## Connectivity Status Assessment Methods {-}
 

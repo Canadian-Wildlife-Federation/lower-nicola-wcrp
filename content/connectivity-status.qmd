@@ -246,8 +246,8 @@ import numpy as np
 
 df = pd.DataFrame({"Goal #": [1,2,3],
                    "Goal": ["By 2031, the total area of groundwater-serviced off-channel thermal refuge accessible to anadromous salmonids will increase by 6,000 m2 within the Lower Nicola River watershed. ",
-                            "By 2025, the % of total linear spawning habitat accessible to anadromous salmonids will not decrease below 96% within the Lower Nicola River watershed.  ",
-                            "By 2031, the % of total linear rearing habitat accessible to anadromous salmonids will increase from 83% to 90% within the Lower Nicola River watershed." ]
+                            "By 2025, the % of total linear spawning habitat accessible to anadromous salmonids will not decrease below 84% within the Lower Nicola River watershed.  ",
+                            "By 2031, the % of total linear rearing habitat accessible to anadromous salmonids will increase from 81% to 90% within the Lower Nicola River watershed." ]
                     })
 
 data = df.style.hide().set_properties(**{'text-align': 'left'})

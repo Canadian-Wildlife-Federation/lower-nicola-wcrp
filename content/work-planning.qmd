@@ -2,6 +2,25 @@
 
 ## Annual Progress Report {.unnumbered}
 
+The Lower Nicola Indian Band, Nooaitch Band, and Scw’exmx Tribal Council completed in-depth barrier assessments and habitat confirmations at several sites (Stumbles, Kwinshatin, Brook, Murray Lake, Midday creeks) on the intermediate barriers list. In addition, initial results from CWF’s drone imagery project to identify thermal refugia were developed and reviewed at a working group meeting with program partners in 2023.
+
+## Annual Work Plan {.unnumbered}
+
+```{r params, echo = FALSE, results = 'asis'}
+#| label: tbl-param
+#| tbl-cap: "Work plan for the Lower Nicola Watershed."
+#| warning: false
+
+library("flextable")
+
+data <- read.csv("data/work-plan.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- bg(ft, bg = "#008270", part = "header")
+ft <- color(ft, color = "white", part = "header")
+ft <- set_caption(ft)
+ft |> autofit() 
+```
+
 ## Operational Plan {.unnumbered}
 
 The operational plan represents a preliminary exercise undertaken by the planning team to identify the potential leads, potential participants, and estimated cost for the implementation of each action in the Lower Nicola River watershed. The table below summarizes individuals, groups, or organizations that the planning team felt could lead or participate in the implementation of the plan and should be interpreted as the first step in on-going planning and engagement to develop more detailed and sophisticated action plans for each entry in the table. The individuals, groups, and organizations listed under the "Lead(s)" or "Potential Participants" columns are those that provisionally expressed interest in participating in one of those roles or were suggested by the planning team for further engagement (denoted in bold), for those that are not members of the planning team. The leads, participants, and estimated costs in the operational plan are not binding nor an official commitment of resources, but rather provide a roadmap for future coordination and engagement to work towards implementation of the WCRP.
@@ -73,22 +92,3 @@ library("flextable")
 
 ```
 
-## Annual Work Plan {.unnumbered}
-
-The Lower Nicola Indian Band, Nooaitch Band, and Scw’exmx Tribal Council completed in-depth barrier assessments and habitat confirmations at several sites (Stumbles, Kwinshatin, Brook, Murray Lake, Midday creeks) on the intermediate barriers list. In addition, initial results from CWF’s drone imagery project to identify thermal refugia were developed and reviewed at a working group meeting with program partners in 2023.
-
-
-```{r params, echo = FALSE, results = 'asis'}
-#| label: tbl-param
-#| tbl-cap: "Work plan for the Lower Nicola Watershed."
-#| warning: false
-
-library("flextable")
-
-data <- read.csv("data/work-plan.csv", check.names=FALSE)
-ft <- flextable(data)
-ft <- bg(ft, bg = "#008270", part = "header")
-ft <- color(ft, color = "white", part = "header")
-ft <- set_caption(ft)
-ft |> autofit() 
-```
