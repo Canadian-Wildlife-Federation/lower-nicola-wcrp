@@ -66,7 +66,7 @@ def watershed_connectivity(habitat_type):
     all_habitat = result[0]['all_habitat']
     all_habitat_acc = result[0]['all_habitat_accessible']
 
-    return str(round(connect_stat)), all_habitat, all_habitat_acc
+    return str(round(connect_stat,2)), all_habitat, all_habitat_acc
 
 warnings.filterwarnings('ignore')
 
@@ -113,7 +113,7 @@ ft |> autofit()
 
 ### Longitudinal Barriers {.unnumbered}
 
-To achieve Goals 2 and 3 in this plan, it is necessary to prioritize and identify a suite of barriers that, if remediated, will provide access to a minimum of 115 km of modelled rearing habitat (@tbl-table16).
+To achieve Goals 2 and 3 in this plan, it is necessary to prioritize and identify a suite of barriers that, if remediated, will provide access to a minimum of 69.33 km of modelled rearing habitat (@tbl-table16).
 
 ```{python echo=FALSE}
 #| label: tbl-table16
@@ -128,13 +128,13 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-total = watershed_connectivity("ALL")[1] #total km in HORS
-access = watershed_connectivity("ALL")[2]
+total = watershed_connectivity("REARING")[1] #total km in HORS
+access = watershed_connectivity("REARING")[2]
 gain = round((total*0.96)-access,2)
 
 df = pd.DataFrame({"Habitat Type":["Rearing"],
-                   "Currently accessible (km)":[str(access)],
-                   "Total": [str(total)],
+                   "Currently accessible (km)":[str(round(access,2))],
+                   "Total": [str(round(total,2))],
                    "Current Connectivity Status":[str(watershed_connectivity("REARING")[0])+"%"],
                    "Goal": ["96%"],
                    "Gain required (km)": [str(gain)]

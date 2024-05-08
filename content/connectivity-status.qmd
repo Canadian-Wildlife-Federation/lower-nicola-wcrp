@@ -66,7 +66,7 @@ def watershed_connectivity(habitat_type):
 
     connect_stat = result[0]['connectivity_status']
 
-    return str(round(connect_stat))
+    return str(round(connect_stat,2))
 
 num_dam = barrier_severity('DAM')[1]
 km_dam = barrier_extent('DAM')[0]
@@ -113,6 +113,13 @@ def highlighttab7b(val):
     yellow = '#ffff00;'
     lgreen = '#92d050;'
     dgreen = '#03853e;'
+    
+    def is_float(value):
+        try:
+            float(value)
+            return True
+        except ValueError:
+            return False
 
     if val=="?" : color = red
     elif val[0:].isdigit() and int(val) < 80 : color = red
@@ -159,6 +166,13 @@ def highlighttab7(val):
     yellow = '#ffff00;'
     lgreen = '#92d050;'
     dgreen = '#03853e;'
+    
+    def is_float(value):
+        try:
+            float(value)
+            return True
+        except ValueError:
+            return False
 
     if val=="<25%" : color = red
     elif val[0:].isdigit() and int(val) <25 : color = red
@@ -167,7 +181,7 @@ def highlighttab7(val):
     elif val=="51-75%"  : color = lgreen
     elif val[0:].isdigit() and (int(val) >= 50 and int(val) < 75) : color = lgreen 
     elif val ==">75%": color = dgreen
-    elif val[0:].isdigit() and int(val) >= 75 : color = dgreen 
+    elif is_float(val) and float(val) >= 75 : color = dgreen 
     elif val == "Current Status:" : return "font-weight: bold"
     else: color = 'white'
     return 'background-color: %s' % color
@@ -205,6 +219,13 @@ def highlighttab7(val):
     yellow = '#ffff00;'
     lgreen = '#92d050;'
     dgreen = '#03853e;'
+    
+    def is_float(value):
+        try:
+            float(value)
+            return True
+        except ValueError:
+            return False
 
     if val=="<25%" : color = red
     elif val[0:].isdigit() and int(val) <25 : color = red
@@ -213,7 +234,7 @@ def highlighttab7(val):
     elif val=="51-75%"  : color = lgreen
     elif val[0:].isdigit() and (int(val) >= 50 and int(val) < 75) : color = lgreen 
     elif val ==">75%": color = dgreen
-    elif val[0:].isdigit() and int(val) >= 75 : color = dgreen 
+    elif is_float(val) and float(val) >= 75 : color = dgreen 
     elif val == "Current Status:" : return "font-weight: bold"
     else: color = 'white'
     return 'background-color: %s' % color
@@ -246,8 +267,8 @@ import numpy as np
 
 df = pd.DataFrame({"Goal #": [1,2,3],
                    "Goal": ["By 2031, the total area of groundwater-serviced off-channel thermal refuge accessible to anadromous salmonids will increase by 6,000 m2 within the Lower Nicola River watershed. ",
-                            "By 2025, the % of total linear spawning habitat accessible to anadromous salmonids will not decrease below 84% within the Lower Nicola River watershed.  ",
-                            "By 2031, the % of total linear rearing habitat accessible to anadromous salmonids will increase from 81% to 90% within the Lower Nicola River watershed." ]
+                            "By 2025, the % of total linear spawning habitat accessible to anadromous salmonids will not decrease below 84.23% within the Lower Nicola River watershed.  ",
+                            "By 2031, the % of total linear rearing habitat accessible to anadromous salmonids will increase from 80.82% to 90% within the Lower Nicola River watershed." ]
                     })
 
 data = df.style.hide().set_properties(**{'text-align': 'left'})
