@@ -1,3 +1,13 @@
+```{python echo=FALSE}
+import warnings
+import pandas as pd
+import numpy as np
+import python.api_calls as api
+import matplotlib as mpl
+
+warnings.filterwarnings('ignore')
+```
+
 # Key Ecological Attributes and Current Connectivity Status {-}
 
 The planning team devised three Key Ecological Attributes (KEAs) and associated indicators to assess the current connectivity status of the watershed – Accessible Off-channel Thermal Refuge, Accessible Spawning Habitat, and Accessible Rearing Habitat. KEAs are the key aspects of anadromous salmonid ecology that are being targeted by this WCRP. The connectivity status for the Anadromous Salmonids KEAs were used to establish goals to improve habitat connectivity in the watershed and will be the baseline against which progress is tracked over time.
@@ -5,81 +15,7 @@ The planning team devised three Key Ecological Attributes (KEAs) and associated 
 The current connectivity status assessments for Accessible Spawning Habitat and Accessible Rearing habitat rely on GIS analyses to map known and modelled barriers to fish passage, identify stream reaches that have potential spawning and rearing habitat, estimate the proportion of habitat that is currently accessible to target species, and prioritize barriers for field assessment that would provide the greatest gains in connectivity. To support a flexible prioritization framework to identify priority barriers in the watershed, two assumptions are made: 1) any modelled (i.e., passability status is unknown) or partial barriers are treated as complete barriers to passage and 2) the habitat modelling is binary, it does not assign any habitat quality values. As such, the current connectivity status will be refined over time as more data on habitat and barriers are collected. For more detail on how the connectivity status assessments were conducted, see [data methods](content/data-methods.qmd).
 
 
-```{python}
-#| echo: false
-#| warning: false
 
-import requests
-import json
-import pandas
-
-def barrier_extent(barrier_type):
-
-    request = 'https://cabd-pro.cwf-fcf.org/bcfishpass/functions/postgisftw.wcrp_barrier_extent/items.json?watershed_group_code=LNIC&barrier_type=' + barrier_type
-
-    response_api = requests.get(request)
-    parse = response_api.text
-    result = json.loads(parse)
-
-    blocked_km = result[0]['all_habitat_blocked_km']
-    blocked_pct = result[0]['extent_pct']
-
-    return blocked_km, blocked_pct
-
-def barrier_count(barrier_type):
-    request = 'https://cabd-pro.cwf-fcf.org/bcfishpass/functions/postgisftw.wcrp_barrier_count/items.json?watershed_group_code=LNIC&barrier_type=' + barrier_type
-
-    response_api = requests.get(request)
-    parse = response_api.text
-    result = json.loads(parse)
-
-    n_passable = result[0]['n_passable']
-    n_barrier = result[0]['n_barrier']
-    n_potential = result[0]['n_potential']
-    n_unknown = result[0]['n_unknown']
-
-    sum_bar = (n_passable, n_barrier, n_potential, n_unknown)
-
-    return n_passable, n_barrier, n_potential, n_unknown, sum(sum_bar)
-
-def barrier_severity(barrier_type):
-
-    request = 'https://cabd-pro.cwf-fcf.org/bcfishpass/functions/postgisftw.wcrp_barrier_severity/items.json?watershed_group_code=LNIC&barrier_type=' + barrier_type
-
-    response_api = requests.get(request)
-    parse = response_api.text
-    result = json.loads(parse)
-
-    n_assessed_barrier = result[0]['n_assessed_barrier']
-    n_assess_total = result[0]['n_assess_total']
-    pct_assessed_barrier = result[0]['pct_assessed_barrier']
-
-    return n_assessed_barrier, n_assess_total, pct_assessed_barrier
-
-def watershed_connectivity(habitat_type):
-
-    request = 'https://cabd-pro.cwf-fcf.org/bcfishpass/functions/postgisftw.wcrp_habitat_connectivity_status/items.json?watershed_group_code=LNIC&habitat_type=' + habitat_type
-
-    response_api = requests.get(request)
-    parse = response_api.text
-    result = json.loads(parse)
-
-    connect_stat = result[0]['connectivity_status']
-
-    return str(round(connect_stat))
-
-num_dam = barrier_severity('DAM')[1]
-km_dam = barrier_extent('DAM')[0]
-pct_dam = barrier_extent('DAM')[1]
-resource_km = barrier_extent('ROAD, RESOURCE/OTHER')[0]
-resource_pct = round(barrier_extent('ROAD, RESOURCE/OTHER')[1])
-demo_km = barrier_extent('ROAD, DEMOGRAPHIC')[0]
-demo_pct = round(barrier_extent('ROAD, DEMOGRAPHIC')[1])
-resource_sev = round(barrier_severity('ROAD, RESOURCE/OTHER')[2])
-demo_sev = round(barrier_severity('ROAD, DEMOGRAPHIC')[2])
-sum_road = barrier_severity('ROAD, RESOURCE/OTHER')[1] + barrier_severity('ROAD, DEMOGRAPHIC')[1]
-
-```
 
 ```{python echo=FALSE}
 #| warning: false
@@ -150,7 +86,7 @@ df = pd.DataFrame({"Target Species":["Target Species"," "],
                    "Poor":["<25%"," "],
                    "Fair":["25-50%"," "],
                    "Good":["51-75%"," "],
-                   "Very Good":[">75%", watershed_connectivity("SPAWNING")]
+                   "Very Good":[">75%", api.watershed_connectivity("SPAWNING")[0]]
                    })
 
 
@@ -196,7 +132,7 @@ df = pd.DataFrame({"Target Species":["Anadromous Salmonids"," "],
                    "Poor":["<25%"," "],
                    "Fair":["25-50%"," "],
                    "Good":["51-75%"," "],
-                   "Very Good":[">75%", watershed_connectivity("REARING")]
+                   "Very Good":[">75%", api.watershed_connectivity("REARING")[0]]
                    })
 
 
@@ -246,8 +182,8 @@ import numpy as np
 
 df = pd.DataFrame({"Goal #": [1,2,3],
                    "Goal": ["By 2031, the total area of groundwater-serviced off-channel thermal refuge accessible to anadromous salmonids will increase by 6,000 m2 within the Lower Nicola River watershed. ",
-                            "By 2025, the % of total linear spawning habitat accessible to anadromous salmonids will not decrease below 96% within the Lower Nicola River watershed.  ",
-                            "By 2031, the % of total linear rearing habitat accessible to anadromous salmonids will increase from 83% to 90% within the Lower Nicola River watershed." ]
+                            "By 2025, the % of total linear spawning habitat accessible to anadromous salmonids will not decrease below "+str(api.watershed_connectivity("SPAWNING")[0])+"% within the Lower Nicola River watershed.  ",
+                            "By 2031, the % of total linear rearing habitat accessible to anadromous salmonids will increase from "+str(api.watershed_connectivity("REARING")[0])+"% to 90% within the Lower Nicola River watershed." ]
                     })
 
 data = df.style.hide().set_properties(**{'text-align': 'left'})
@@ -260,7 +196,19 @@ data.set_table_styles(
 
 ```
 
-
+```{python}
+#| echo: false
+num_dam = api.barrier_severity('DAM')[1]
+km_dam = api.barrier_extent('DAM')[0]
+pct_dam = api.barrier_extent('DAM')[1]
+resource_km = api.barrier_extent('ROAD, RESOURCE/OTHER')[0]
+resource_pct = round(api.barrier_extent('ROAD, RESOURCE/OTHER')[1])
+demo_km = api.barrier_extent('ROAD, DEMOGRAPHIC')[0]
+demo_pct = round(api.barrier_extent('ROAD, DEMOGRAPHIC')[1])
+resource_sev = round(api.barrier_severity('ROAD, RESOURCE/OTHER')[2])
+demo_sev = round(api.barrier_severity('ROAD, DEMOGRAPHIC')[2])
+sum_road = api.barrier_severity('ROAD, RESOURCE/OTHER')[1] + api.barrier_severity('ROAD, DEMOGRAPHIC')[1]
+```
 
 ```{r echo=FALSE}
 #| echo: false
