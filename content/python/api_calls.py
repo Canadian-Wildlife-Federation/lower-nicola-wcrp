@@ -60,10 +60,21 @@ def watershed_connectivity(habitat_type):
     all_habitat = result[0]['all_habitat']
     all_habitat_acc = result[0]['all_habitat_accessible']
 
-    return str(round(connect_stat)), all_habitat, all_habitat_acc
+    return round(connect_stat), all_habitat, all_habitat_acc
 
 warnings.filterwarnings('ignore')
 
-total = watershed_connectivity("ALL")[1] #total km in HORS
+connect = watershed_connectivity("ALL")[0]
+total = watershed_connectivity("ALL")[1] #total km in LNIC
 access = watershed_connectivity("ALL")[2]
 gain = round((total*0.96)-access,2)
+
+connect_spawn = watershed_connectivity("SPAWNING")[0]
+total_spawn = watershed_connectivity("SPAWNING")[1] #total km in LNIC
+access_spawn = watershed_connectivity("SPAWNING")[2]
+gain_spawn = round((total_spawn*0.96)-access_spawn,2)
+
+connect_rear = round(watershed_connectivity("REARING")[0],2)
+total_rear = round(watershed_connectivity("REARING")[1],2) #total km in LNIC
+access_rear = round(watershed_connectivity("REARING")[2],2)
+gain_rear = round((total_rear*0.96)-access_rear,2)

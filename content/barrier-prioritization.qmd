@@ -1,5 +1,9 @@
 ```{python echo=FALSE}
 import python.api_calls as api
+import pandas as pd
+import warnings
+
+warnings.filterwarnings('ignore')
 ```
 ```{r}
 #| echo: false
@@ -8,6 +12,8 @@ import python.api_calls as api
 library(reticulate)
 api <- import("python.api_calls")
 gain <- api$gain
+
+source("Rscripts/table_formatting.R")
 
 ```
 
@@ -28,16 +34,10 @@ There is a lack of comprehensive data and mapping of lateral barriers and potent
 #| warning: false
 #| echo: false
 
-library("flextable")
-
 data <- read.csv("data/lateral_barriers.csv", check.names=FALSE)
-ft <- flextable(data) |> colformat_num(big.mark = "", decimal.mark = ".", digits = 2) 
-ft <- bg(ft, bg = "#008270", part = "header")
-ft <- color(ft, color = "white", part = "header")
-ft <- set_caption(ft)
-ft <- align_text_col(ft, align = "left", header = TRUE)
-ft <- align_nottext_col(ft, align = "left", header = TRUE)
-ft |> autofit() 
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
 ```
 
 
@@ -51,23 +51,13 @@ To achieve Goals 2 and 3 in this plan, it is necessary to prioritize and identif
 #| warning: false
 #| echo: false
 
-import pandas as pd
-import numpy as np
-import matplotlib as mpl
-import warnings
-
-warnings.filterwarnings('ignore')
-
-total = api.watershed_connectivity("ALL")[1] #total km in HORS
-access = round(api.watershed_connectivity("ALL")[2], 2)
-gain = round((total*0.96)-access,2)
 
 df = pd.DataFrame({"Habitat Type":["Rearing"],
-                   "Currently accessible (km)":[str(access)],
-                   "Total": [str(total)],
-                   "Current Connectivity Status":[str(api.watershed_connectivity("REARING")[0])+"%"],
+                   "Currently accessible (km)":[str(api.access_rear)],
+                   "Total": [str(api.total_rear)],
+                   "Current Connectivity Status":[str(api.connect_rear)+"%"],
                    "Goal": ["96%"],
-                   "Gain required (km)": [str(gain)]
+                   "Gain required (km)": [str(api.gain_rear)]
                    })
 
 data = df.style.hide().set_properties(**{'text-align': 'left'})
@@ -100,16 +90,10 @@ The intermediate barrier list was updated following the barrier assessments and 
 #| warning: false
 #| echo: false
 
-library("flextable")
-
 data <- read.csv("data/excluded_structures_table.csv", check.names=FALSE)
-ft <- flextable(data) |> colformat_num(big.mark = "", decimal.mark = ".", digits = 2) 
-ft <- bg(ft, bg = "#008270", part = "header")
-ft <- color(ft, color = "white", part = "header")
-ft <- set_caption(ft)
-ft <- align_text_col(ft, align = "left", header = TRUE)
-ft <- align_nottext_col(ft, align = "left", header = TRUE)
-ft |> autofit() 
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
 ```
 
 
@@ -122,14 +106,10 @@ ft |> autofit()
 library("flextable")
 
 data <- read.csv("data/intermediate_structures_table.csv", check.names=FALSE)
-inter_num <- length(data)
-ft <- flextable(data) |> colformat_num(big.mark = "", decimal.mark = ".", digits = 2) 
-ft <- bg(ft, bg = "#008270", part = "header")
-ft <- color(ft, color = "white", part = "header")
-ft <- set_caption(ft)
-ft <- align_text_col(ft, align = "left", header = TRUE)
-ft <- align_nottext_col(ft, align = "left", header = TRUE)
-ft |> autofit() 
+inter_num <- nrow(data)
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
 ```
 
 
@@ -143,14 +123,10 @@ ft |> autofit()
 library("flextable")
 
 data <- read.csv("data/priority_barriers_for_rehabilitation_table.csv", check.names=FALSE)
-prior_num <- length(data)
-ft <- flextable(data) |> colformat_num(big.mark = "", decimal.mark = ".", digits = 2) 
-ft <- bg(ft, bg = "#008270", part = "header")
-ft <- color(ft, color = "white", part = "header")
-ft <- set_caption(ft)
-ft <- align_text_col(ft, align = "left", header = TRUE)
-ft <- align_nottext_col(ft, align = "left", header = TRUE)
-ft |> autofit() 
+prior_num <- nrow(data)
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
 ```
 
 
@@ -188,13 +164,9 @@ Out of the barriers on the intermediate list, 11 require further field assessmen
 library("flextable")
 
 data <- read.csv("data/field-reqs.csv", check.names=FALSE)
-ft <- flextable(data) 
-ft <- bg(ft, bg = "#008270", part = "header")
-ft <- color(ft, color = "white", part = "header")
-ft <- set_caption(ft)
-ft <- align_text_col(ft, align = "left", header = TRUE)
-ft <- align_nottext_col(ft, align = "left", header = TRUE)
-ft |> autofit() 
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
 ```
 
 Based on the results of the prioritization analysis, 15 barriers from the priority and intermediate barrier list are required to be remediated to achieve the connectivity goals in this plan: 
@@ -210,11 +182,7 @@ library("flextable")
 
 data <- read.csv("data/remediation-cost.csv", check.names=FALSE)
 ft <- flextable(data)
-ft <- bg(ft, bg = "#008270", part = "header")
-ft <- color(ft, color = "white", part = "header")
-ft <- set_caption(ft)
-ft <- align_text_col(ft, align = "left", header = TRUE)
-ft <- align_nottext_col(ft, align = "left", header = TRUE)
-ft |> autofit() 
+ft <- format_flextable(ft)
+ft
 ```
 
