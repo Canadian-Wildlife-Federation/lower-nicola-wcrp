@@ -72,7 +72,7 @@ warnings.filterwarnings('ignore')
 
 total = watershed_connectivity("ALL")[1] #total km in HORS
 access = watershed_connectivity("ALL")[2]
-gain = round((total*0.96)-access,2)
+gain = round((total*0.9)-access,2)
 ```
 
 ```{r}
@@ -108,7 +108,8 @@ ft <- color(ft, color = "white", part = "header")
 ft <- set_caption(ft)
 ft <- align_text_col(ft, align = "left", header = TRUE)
 ft <- align_nottext_col(ft, align = "left", header = TRUE)
-ft |> autofit() 
+ft <- width(ft, width = 2)
+ft 
 ```
 
 ### Longitudinal Barriers {.unnumbered}
@@ -130,13 +131,13 @@ warnings.filterwarnings('ignore')
 
 total = watershed_connectivity("REARING")[1] #total km in HORS
 access = watershed_connectivity("REARING")[2]
-gain = round((total*0.96)-access,2)
+gain = round((total*0.90)-access,2)
 
 df = pd.DataFrame({"Habitat Type":["Rearing"],
                    "Currently accessible (km)":[str(round(access,2))],
                    "Total": [str(round(total,2))],
                    "Current Connectivity Status":[str(watershed_connectivity("REARING")[0])+"%"],
-                   "Goal": ["96%"],
+                   "Goal": ["90%"],
                    "Gain required (km)": [str(gain)]
                    })
 
@@ -177,7 +178,8 @@ ft <- color(ft, color = "white", part = "header")
 ft <- set_caption(ft)
 ft <- align_text_col(ft, align = "left", header = TRUE)
 ft <- align_nottext_col(ft, align = "left", header = TRUE)
-ft |> autofit() 
+ft <- width(ft, width = 2)
+ft 
 ```
 
 ```{r deficient, echo = FALSE, results = 'asis'}
@@ -196,7 +198,8 @@ ft <- color(ft, color = "white", part = "header")
 ft <- set_caption(ft)
 ft <- align_text_col(ft, align = "left", header = TRUE)
 ft <- align_nottext_col(ft, align = "left", header = TRUE)
-ft |> autofit() 
+ft <- width(ft, width = 0.8)
+ft  
 ```
 
 ```{r priority, echo = FALSE, results = 'asis'}
@@ -215,10 +218,11 @@ ft <- color(ft, color = "white", part = "header")
 ft <- set_caption(ft)
 ft <- align_text_col(ft, align = "left", header = TRUE)
 ft <- align_nottext_col(ft, align = "left", header = TRUE)
-ft |> autofit() 
+ft <- width(ft, width = 0.8)
+ft  
 ```
 
-
+`{\tiny`{=latex}
 ```{python}
 #| label: tbl-remove1
 #| tbl-cap: "List of barriers that were removed from consideration from first iteration of the intermediate barrier list (field assessments occurred during the 2021 field season). Removed following discussion with the planning team due to these structures not existing, being passable, not be associated with usable habitat, or deemed not feasible to remediate because of logistic considerations."
@@ -237,5 +241,5 @@ data.set_table_styles(
        'props': [('background-color', '#008270'),('text-align', 'left')]
    }])
 ```
-
+`}`{=latex}
 

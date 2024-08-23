@@ -74,7 +74,8 @@ ft <- flextable(data)
 ft <- bg(ft, bg = "#008270", part = "header")
 ft <- color(ft, color = "white", part = "header")
 ft <- set_caption(ft)
-ft |> autofit() 
+ft <- width(ft, width = 1)
+ft 
 ```
 
 ```{r echo = FALSE, results = 'asis'}
@@ -104,7 +105,8 @@ ft <- flextable(data)
 ft <- bg(ft, bg = "#008270", part = "header")
 ft <- color(ft, color = "white", part = "header")
 ft <- set_caption(ft)
-ft |> autofit() 
+ft <- width(ft, width = 1)
+ft
 ```
 
 ```{r echo = FALSE, results = 'asis'}
@@ -134,7 +136,8 @@ ft <- flextable(data)
 ft <- bg(ft, bg = "#008270", part = "header")
 ft <- color(ft, color = "white", part = "header")
 ft <- set_caption(ft)
-ft |> autofit() 
+ft <- width(ft, width = 1)
+ft 
 ```
 
 ```{r echo = FALSE, results = 'asis'}
@@ -352,7 +355,7 @@ There are `r num_dam` mapped small dams on “potentially accessible” stream s
 
 ### Road-stream Crossings {.unnumbered}
 
-Road-stream crossings are an abundant barrier type in the watershed, with 80assessed and modelled crossings located on modelled Anadromous Salmonid habitat. Demographic road crossings (highways, municipal, and paved roads) block 55.39 km of habitat (57.4%), with 88% of assessed crossings having been identified as barriers to fish passage. Resource roads block 34.04 km of habitat (35.3%), with 73% of assessed crossings identified as barriers. Significant land use and linear development throughout the valley bottom has disconnected the Nicola River from important habitat in some tributaries, including Highway 5 and Highway 8 [see Barrier Prioritization](barrier-prioritization.qmd). The collective experience and input from the planning team resulted in a Low irreversibility rating due to the existing body of knowledge and resources to support the remediation of road-stream crossings, though it was noted that there is significant variability between resource roads and highway crossings.
+Road-stream crossings are an abundant barrier type in the watershed, with 80 assessed and modelled crossings located on modelled Anadromous Salmonid habitat. Demographic road crossings (highways, municipal, and paved roads) block 55.39 km of habitat (57.4%), with 88% of assessed crossings having been identified as barriers to fish passage. Resource roads block 34.04 km of habitat (35.3%), with 73% of assessed crossings identified as barriers. Significant land use and linear development throughout the valley bottom has disconnected the Nicola River from important habitat in some tributaries, including Highway 5 and Highway 8 [see Barrier Prioritization](barrier-prioritization.qmd). The collective experience and input from the planning team resulted in a Low irreversibility rating due to the existing body of knowledge and resources to support the remediation of road-stream crossings, though it was noted that there is significant variability between resource roads and highway crossings.
 
 ### Trail-stream crossings {.unnumbered}
 
