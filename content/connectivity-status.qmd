@@ -44,7 +44,7 @@ df
 ```{python echo=FALSE}
 #| warning: false
 #| echo: false
-df = conn_table.make_assess_table("Target Species", "Available Spawning Habitat", "% of total linear spawning habitat accessible", 25, 50, 75, api.connect)
+df = conn_table.make_assess_table("Target Species", "Available Spawning Habitat", "% of total linear spawning habitat accessible", 25, 50, 75, api.connect_spawn)
 df
 
 ```
@@ -55,7 +55,7 @@ df
 
 ```{python echo=FALSE}
 
-df = conn_table.make_assess_table("Anadromous Salmonids", "Available Rearing Habitat", "% of total linear rearing habitat accessible", 25, 50, 75, api.connect)
+df = conn_table.make_assess_table("Anadromous Salmonids", "Available Rearing Habitat", "% of total linear rearing habitat accessible", 25, 50, 75, api.connect_rear)
 df
 
 ```
