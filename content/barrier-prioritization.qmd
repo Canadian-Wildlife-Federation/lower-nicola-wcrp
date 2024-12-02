@@ -24,7 +24,7 @@ A primary outcome of the WCRP will be the rehabilitation of barriers to connecti
 
 ```{python echo=FALSE}
 #| label: tbl-table16
-#| tbl-cap: "Rearing habitat connectivity gain requirements to meet WCRP goals in the Lower Nicola River watershed. The measures of currently accessible and total habitat values are derived from the intrinsic potential habitat model described in [connectivity status](content/connectivity-status.qmd)."
+#| tbl-cap: "Rearing habitat connectivity gain requirements to meet WCRP goals in the Lower Nicola River watershed. The measures of currently accessible and total habitat values are derived from the intrinsic potential habitat model described in [Connectivity Status](content/connectivity-status)."
 #| warning: false
 #| echo: false
 
