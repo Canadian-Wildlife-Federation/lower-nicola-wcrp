@@ -25,7 +25,7 @@ There is a lack of comprehensive data and mapping of lateral barriers and potent
 
 ```{r remove, echo = FALSE, results = 'asis'}
 #| label: tbl-lateral
-#| tbl-cap: "Identified priority lateral barrier remediation sites for field assessment in the Lower Nicola River watershed. UTM northing and eastings refer to Zone 10."
+#| tbl-cap: "Identified priority lateral barrier rehabilitation sites for field assessment in the Lower Nicola River watershed. UTM northing and eastings refer to Zone 10."
 #| warning: false
 #| echo: false
 
@@ -43,7 +43,7 @@ ft
 ```
 
 ## Longitudinal Field Assessment Ranking Process {-}
-A primary outcome of the WCRP will be the rehabilitation of barriers to connectivity in the Lower Nicola River Watershed. To achieve the goals in this plan, it is necessary to identify a set of structures that, if rehabilitated, will provide access to a minimum of 39 km of rearing habitat (@tbl-table16):
+A primary outcome of the WCRP will be the rehabilitation of barriers to connectivity in the Lower Nicola River Watershed. To achieve the goals in this plan, it is necessary to identify a set of structures that, if rehabilitated, will provide access to a minimum of 52 km of rearing habitat (@tbl-table16):
 
 ```{python echo=FALSE}
 #| label: tbl-table16
