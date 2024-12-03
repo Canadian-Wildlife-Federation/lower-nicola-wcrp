@@ -22,13 +22,13 @@ library(reticulate)
 
 ## Connectivity Status Assessment {-}
 
-The planning team identified three Key Ecological Attributes (KEAs) and associated indicators to assess the current connectivity status of the watershed for each focal species – Accessible Off-channel Thermal Refuge, Accessible Spawning Habitat, and Accessible Rearing Habitat (see @tbl-connectivity). KEAs are the key aspects of anadromous salmon habitat that are being targeted by this WCRP. For each KEA, an associated indicator was assigned to measure the status of that KEA. The connectivity status indicators were used to establish goals to improve key habitat connectivity over time and is the baseline against which progress is tracked over time
+The planning team identified three Key Ecological Attributes (KEAs) and associated indicators to assess the current connectivity status of the watershed for each focal species – Accessible Off-channel Thermal Refuge, Accessible Spawning Habitat, and Accessible Rearing Habitat. KEAs are the key aspects of anadromous salmon habitat that are being targeted by this WCRP. For each KEA, an associated indicator was assigned to measure the status of that KEA. The connectivity status indicators were used to establish goals to improve key habitat connectivity over time and is the baseline against which progress is tracked over time
 
 The current connectivity status was estimated using three spatial models:
 
 1.	Accessibility model: Naturally accessible waterbodies are those that are considered likely accessible to focal species if no human-made barriers existed on the landscape. These were spatially delineated for each focal species using natural barriers (i.e., waterfalls, gradient barriers, or subsurface flows) that would naturally limit upstream movement.
 
-2.	Habitat model: A subset of the naturally accessible waterbody layer was defined as key habitat, i.e., habitat likely to support spawning or rearing, rather than simply movement corridors. The habitat model identifies areas within waterbodies that have a higher potential to support key habitat based on stream channel gradient and discharge. The habitat model criteria can be found in  (@tbl-param-bulkley).
+2.	Habitat model: A subset of the naturally accessible waterbody layer was defined as key habitat, i.e., habitat likely to support spawning or rearing, rather than simply movement corridors. The habitat model identifies areas within waterbodies that have a higher potential to support key habitat based on stream channel gradient and discharge. The habitat model criteria can be found in  (@tbl-additional-params).
 
 3.	Connectivity model: A layer of known or modelled structures was overlaid  on the key habitat results. Structures  with unknown passability were treated as a full barrier until confirmed passable by either local knowledge, desktop review, or field assessment. Watershed connectivity was estimated by calculating the amount of key habitat that is connected to the ocean (i.e., not fragmented by human-made barriers). Key habitat with no structures or only passable structures downstream was considered connected. Key habitat upstream of full, partial, or potential barriers was considered disconnected. All connected habitat was summed and divided by the total amount of key habitat in the watershed to arrive at the KEA indicators. Detailed methods for the connectivity model can be found in [Appendix C](data-methods.qmd)
 
@@ -36,7 +36,7 @@ The current connectivity status was estimated using three spatial models:
 #| warning: false
 #| echo: false
 
-#| label: tbl-connectivityy
+#| label: tbl-connectivity
 #| tbl-cap: "Connectivity status assessment for thermal refuge (a), spawning (b), and rearing (c) habitat in the Lower Nicola River watershed. The Accessible Spawning Habitat and Accessible Rearing Habitat KEAs are evaluated by dividing the length of linear habitat (of each type) that is currently accessible to focal species by the total length of all linear habitat (of each type) in the watershed."
 #| warning: false
 #| echo: false
