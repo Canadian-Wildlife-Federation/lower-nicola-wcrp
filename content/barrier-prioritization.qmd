@@ -78,11 +78,11 @@ The ranking process accounts for the long-term and immediate potential habitat g
 
 Following field assessments, structures are placed on one of five possible lists:
 
-1.	Priority barriers list – the structure is confirmed as a full or partial barrier, has key habitat confirmed to exist upstream, and is considered actionable by the planning team (i.e., action items will be identified to advance rehabilitation of the structure). Depending on the barrier, owner, financial constraints, and quality of upstream habitat, the action may be to leave to end of life cycle before reviewing again, remove and decommission the road, replace with a new passable structure, or modify to temporarily restore connectivity (e.g., fish ladder or baffles installed; Table XX).
+1.	Priority barriers list – the structure is confirmed as a full or partial barrier, has key habitat confirmed to exist upstream, and is considered actionable by the planning team (i.e., action items will be identified to advance rehabilitation of the structure). Depending on the barrier, owner, financial constraints, and quality of upstream habitat, the action may be to leave to end of life cycle before reviewing again, remove and decommission the road, replace with a new passable structure, or modify to temporarily restore connectivity (e.g., fish ladder or baffles installed; see @tbl-confirmed).
 
-2.	Assessed structures that remain data deficient list – some form of field assessment has been completed on the structure, but further investigation is required to confirm either the passability status or presence/suitability of upstream habitat (TABLEXX).
+2.	Assessed structures that remain data deficient list – some form of field assessment has been completed on the structure, but further investigation is required to confirm either the passability status or presence/suitability of upstream habitat (see @tbl-datadeficient).
 
-3.	Rehabilitated barriers list – priority barriers that have been addressed (either through removal, replacement, or temporary fish passage improvement projects; Table XX)
+3.	Rehabilitated barriers list – priority barriers that have been addressed (either through removal, replacement, or temporary fish passage improvement projects; see @tbl-rehabilitated)
 
 4.	Non-actionable barriers list – the structure is confirmed to be a barrier to fish passage and have some amount/quality of habitat upstream, but the planning team will not identify actions to advance rehabilitation of the structure because of logistic considerations (e.g., financial costs), short habitat gain, or the upstream habitat is of poor quality or unsuitable in its present condition to support key life stages of the focal species [Appendix C](data-methods.qmd).
 
