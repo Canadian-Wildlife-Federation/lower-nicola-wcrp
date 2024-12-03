@@ -165,3 +165,11 @@ connect_rear = round(watershed_connectivity("REARING")[0],2)
 total_rear = round(watershed_connectivity("REARING")[1],2) #total km in LNIC
 access_rear = round(watershed_connectivity("REARING")[2],2)
 gain_rear = round((total_rear*0.96)-access_rear,2)
+
+df = GetTrackingTableData()
+confirmed_struc = confirmed_barriers(df)
+
+add_struc = assessedStrucDD(df)
+excluded_struc = ExcludedStructures(df)
+nonaction_struc = nonActionable_barriers(df)
+rehabilitated_struc = RehabilitatedBarriers(df)

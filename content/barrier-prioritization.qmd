@@ -65,6 +65,43 @@ Following field assessments, structures are placed on one of five possible lists
 
 5.	Excluded structures list – the structure is excluded from further consideration in subsequent ranking and work planning because the structure is confirmed passable (e.g., bridge), not present, or there is no key habitat upstream (Appendix XX).
 
+```{r rehab, echo = FALSE, results = 'asis'}
+#| label: tbl-confirmed
+#| tbl-cap: "Confirmed barriers"
+#| warning: false
+#| echo: false
+
+data <- read.csv("data/confirmed_barriers.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
+```
+
+```{r rehab, echo = FALSE, results = 'asis'}
+#| label: tbl-datadeficient
+#| tbl-cap: "Data Deficient Structures"
+#| warning: false
+#| echo: false
+
+data <- read.csv("data/assessed_strucDD.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
+```
+
+
+```{r rehab, echo = FALSE, results = 'asis'}
+#| label: tbl-rehabilitated
+#| tbl-cap: "Rehabilitated Structures"
+#| warning: false
+#| echo: false
+
+data <- read.csv("data/rehabilitated_barriers.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
+```
+
 ### Lateral Barriers (Including to thermal refugia) {.unnumbered}
 
 There is a lack of comprehensive data and mapping of lateral barriers and potential thermal refugia in the watershed to support a strategic prioritization currently (see Action 1.3). However, local knowledge was used to compile a list of candidate sites for field verification as a starting point to improve lateral and thermal connectivity. 

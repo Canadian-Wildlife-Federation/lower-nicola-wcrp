@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lower Nicola Watershed Connectivity Restoration Plan: 2021 - 2040 - Data Download and Methods</title>
+<title>Data Download and Methods – Lower Nicola Watershed Connectivity Restoration Plan: 2021 - 2040</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -45,7 +45,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -54,6 +60,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -65,6 +72,10 @@ ul.task-list li input[type="checkbox"] {
         background: #f6f6f6;
       }
 </style>
+<link href="../site_libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
+
+<script src="../site_libs/tabwid-1.1.3/tabwid.js"></script>
+
 
 
 <link rel="stylesheet" href="../style.css">
@@ -73,16 +84,16 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/project-partners.html">Appendices</a></li><li class="breadcrumb-item"><a href="../content/data-methods.html">Data Download and Methods</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/project-partners.html">Appendices</a></li><li class="breadcrumb-item"><a href="../content/data-methods.html">Data Download and Methods</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -91,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../content/project-partners.html">Appendices</a></li><li class="breadcrumb-item"><a href="../content/data-methods.html">Data Download and Methods</a></li></ol></nav>
       <h1 class="title">Data Download and Methods</h1>
                       </div>
   </div>
@@ -107,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
       <img src="../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
@@ -116,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
       <a href="../">Lower Nicola Watershed Connectivity Restoration Plan: 2021 - 2040</a> 
         <div class="sidebar-tools-main">
     <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-save"></i></a>
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-save"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="../_book/Lower-Nicola-Watershed-Connectivity-Restoration-Plan--2021---2040.docx">
@@ -179,9 +190,9 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -209,7 +220,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -218,11 +229,13 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#data-download" id="toc-data-download" class="nav-link active" data-scroll-target="#data-download">Data Download</a></li>
   <li><a href="#connectivity-status-assessment-methods" id="toc-connectivity-status-assessment-methods" class="nav-link" data-scroll-target="#connectivity-status-assessment-methods">Connectivity Status Assessment Methods</a></li>
+  <li><a href="#other-tables" id="toc-other-tables" class="nav-link" data-scroll-target="#other-tables">Other tables</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
+
 
 
 
@@ -234,6 +247,29 @@ ul.task-list li input[type="checkbox"] {
 <section id="connectivity-status-assessment-methods" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="connectivity-status-assessment-methods">Connectivity Status Assessment Methods</h2>
 <p>Coming soon.</p>
+</section>
+<section id="other-tables" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="other-tables">Other tables</h2>
+<div id="tbl-nonaction" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-nonaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<strong>Table</strong>&nbsp;1: Non-Actionable structres
+</figcaption>
+<div aria-describedby="tbl-nonaction-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="tabwid"><style>.cl-3e8f879c{}.cl-3e83628c{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(255, 255, 255, 1.00);background-color:transparent;}.cl-3e85a358{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-3e85b118{width:0.931in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3e85b119{width:1.763in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3e85b11a{width:1.584in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3e85b122{width:1.058in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3e85b123{width:1.253in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3e85b124{width:0.752in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3e85b125{width:0.659in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3e85b12c{width:1.389in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-3e8f879c"><thead><tr style="overflow-wrap:break-word;"><th class="cl-3e85b118"><p class="cl-3e85a358"><span class="cl-3e83628c">barrier_id</span></p></th><th class="cl-3e85b119"><p class="cl-3e85a358"><span class="cl-3e83628c">modelled_crossing_id</span></p></th><th class="cl-3e85b11a"><p class="cl-3e85a358"><span class="cl-3e83628c">watercourse_name</span></p></th><th class="cl-3e85b122"><p class="cl-3e85a358"><span class="cl-3e83628c">road_name</span></p></th><th class="cl-3e85b123"><p class="cl-3e85a358"><span class="cl-3e83628c">structure_type</span></p></th><th class="cl-3e85b124"><p class="cl-3e85a358"><span class="cl-3e83628c">reason</span></p></th><th class="cl-3e85b125"><p class="cl-3e85a358"><span class="cl-3e83628c">notes</span></p></th><th class="cl-3e85b12c"><p class="cl-3e85a358"><span class="cl-3e83628c">supporting_links</span></p></th></tr></thead></table></div>
+</div>
+</figure>
+</div>
+<div id="tbl-excluded" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-excluded-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<strong>Table</strong>&nbsp;2: Excluded structures
+</figcaption>
+<div aria-describedby="tbl-excluded-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="tabwid"><style>.cl-3ece17fa{}.cl-3ec6b050{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(255, 255, 255, 1.00);background-color:transparent;}.cl-3ec6b05a{font-family:'Arial';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-3ec94158{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-3ec9521a{width:3.148in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95224{width:1.763in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9522e{width:1.584in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9522f{width:1.712in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95238{width:1.839in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95239{width:1.941in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9523a{width:1.729in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9523b{width:8.786in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95242{width:13.856in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95243{width:5.53in;background-color:rgba(0, 130, 112, 1.00);vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95244{width:3.148in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95245{width:1.763in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9524c{width:1.584in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9524d{width:1.712in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9524e{width:1.839in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95256{width:1.941in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95257{width:1.729in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95258{width:8.786in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95259{width:13.856in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95260{width:5.53in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95261{width:3.148in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95262{width:1.763in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95263{width:1.584in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9526a{width:1.712in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9526b{width:1.839in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95274{width:1.941in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95275{width:1.729in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95276{width:8.786in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9527e{width:13.856in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9527f{width:5.53in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95280{width:3.148in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95288{width:1.763in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95289{width:1.584in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95292{width:1.712in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95293{width:1.839in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec95294{width:1.941in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9529c{width:1.729in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9529d{width:8.786in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9529e{width:13.856in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec9529f{width:5.53in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec952a6{width:3.148in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec952a7{width:1.763in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec952a8{width:1.584in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec952a9{width:1.712in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec952b0{width:1.839in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec952b1{width:1.941in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec952b2{width:1.729in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec952ba{width:8.786in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec952bb{width:13.856in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-3ec952bc{width:5.53in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-3ece17fa"><thead><tr style="overflow-wrap:break-word;"><th class="cl-3ec9521a"><p class="cl-3ec94158"><span class="cl-3ec6b050">barrier_id</span></p></th><th class="cl-3ec95224"><p class="cl-3ec94158"><span class="cl-3ec6b050">modelled_crossing_id</span></p></th><th class="cl-3ec9522e"><p class="cl-3ec94158"><span class="cl-3ec6b050">watercourse_name</span></p></th><th class="cl-3ec9522f"><p class="cl-3ec94158"><span class="cl-3ec6b050">road_name</span></p></th><th class="cl-3ec95238"><p class="cl-3ec94158"><span class="cl-3ec6b050">structure_type</span></p></th><th class="cl-3ec95239"><p class="cl-3ec94158"><span class="cl-3ec6b050">reason_for_exclusion</span></p></th><th class="cl-3ec9523a"><p class="cl-3ec94158"><span class="cl-3ec6b050">method_of_exclusion</span></p></th><th class="cl-3ec9523b"><p class="cl-3ec94158"><span class="cl-3ec6b050">reason</span></p></th><th class="cl-3ec95242"><p class="cl-3ec94158"><span class="cl-3ec6b050">notes</span></p></th><th class="cl-3ec95243"><p class="cl-3ec94158"><span class="cl-3ec6b050">supporting_links</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">1011300844</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11300844</span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Voght Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Highway 5</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Other</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Local knowledge</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Impassable falls downstream</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Not accessible to anadromous salmonids. Crossing not assessed.</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">1011302471</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11302471</span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Voght Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Unnamed</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Local knowledge</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Impassable falls dwonstream</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Not accessible to anadrmous salmonids. Crossing not assesed.</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95261"><p class="cl-3ec94158"><span class="cl-3ec6b05a">196957</span></p></td><td class="cl-3ec95262"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11300867</span></p></td><td class="cl-3ec95263"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Brook Creek</span></p></td><td class="cl-3ec9526a"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Kettle Valley Railway</span></p></td><td class="cl-3ec9526b"><p class="cl-3ec94158"><span class="cl-3ec6b05a">None</span></p></td><td class="cl-3ec95274"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No structure</span></p></td><td class="cl-3ec95275"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec95276"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable</span></p></td><td class="cl-3ec9527e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Burned out bridge has collpased but is not impeding passage.</span></p></td><td class="cl-3ec9527f"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">196997</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11300768</span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Howarth Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Kane Valley Road</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Local knowledge</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Impassable falls downstream</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=197617</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">197014</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11300916</span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Midday Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Patchett Road</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Upstream of inaccessible wetland</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Crossing scores as barrier but contains low quality rearing habitat suitable for Rainbow Trout only. No spawning or overwintering habitat. Fish population abundant due to stocking in Lily Lake upstream.</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=200146</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95280"><p class="cl-3ec94158"><span class="cl-3ec6b05a">197036</span></p></td><td class="cl-3ec95288"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11301822</span></p></td><td class="cl-3ec95289"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Midday Creek</span></p></td><td class="cl-3ec95292"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Lily Lake Road</span></p></td><td class="cl-3ec95293"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95294"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec9529c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec9529d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Upstream of inaccessible wetland. </span></p></td><td class="cl-3ec9529e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Crossing scores as barrier but contains rearing habitat suitable for Rainbow Trout only. Overwintering habitat in outlet pool only. Rainbow Trout present upstream and downstream of crossing.</span></p></td><td class="cl-3ec9529f"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=200147</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95280"><p class="cl-3ec94158"><span class="cl-3ec6b05a">197039</span></p></td><td class="cl-3ec95288"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11300400</span></p></td><td class="cl-3ec95289"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Kwinshatin Creek</span></p></td><td class="cl-3ec95292"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Coldwater Road</span></p></td><td class="cl-3ec95293"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95294"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec9529c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec9529d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No suitable spawning habitat for salmon, excellent rearing habitat but too steep to access from Coldwater River.</span></p></td><td class="cl-3ec9529e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Opportunistic Rainbow Trout spawning habitat present and 70 mm-200 mm Rainbow Trout common in stream. Possible RB/CT hybrid also present. Culvert is curved in middle and undersized.</span></p></td><td class="cl-3ec9529f"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=198909</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">197694</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a">24713788</span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Prospect Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Prospect Creek FSR</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Local knowledge</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Impassable falls downstream</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Not accessible to anadromous salmonids; however, high-quality habitat may be worth pursuing r for non-focal species.</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=198962</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">197695</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a">24713781</span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Prospect Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Prospect Creek FSR</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Local knowledge</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Impassable falls downstream</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Not accessible to anadromous salmonids; however, high-quality habitat may be worth pursuing r for non-focal species.</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=198961</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">197696</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11305711</span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Prospect Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Prospect Creek FSR</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Local knowledge</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Impassable falls downstream</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">GPS coordinates incorrect</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=198596</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">197880</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11301738</span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stumbles Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Private</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable to adult fish at all flows and to all juvenile Coho at low flows; 87.5% of juvenile Coho at higher flows.</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=200140</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">197883</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11301743</span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stumbles Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Private</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable to adult fish at all flows and to all juvenile Coho at low flows; 87.5% of juvenile Coho at higher flows.</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=200142</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95261"><p class="cl-3ec94158"><span class="cl-3ec6b05a">197891</span></p></td><td class="cl-3ec95262"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11304291</span></p></td><td class="cl-3ec95263"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Brook Creek</span></p></td><td class="cl-3ec9526a"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Kettle Valley Railway</span></p></td><td class="cl-3ec9526b"><p class="cl-3ec94158"><span class="cl-3ec6b05a">None</span></p></td><td class="cl-3ec95274"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No structure</span></p></td><td class="cl-3ec95275"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec95276"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable</span></p></td><td class="cl-3ec9527e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Burned out bridge has collapsed but is not causing any passage issues.</span></p></td><td class="cl-3ec9527f"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">198881</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11300797</span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Midday Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">2000th Street</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Upstream of inaccessible wetland</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Crossing scores as barrier but contains low quality rearing habitat suitable for Rainbow Trout only. No spawning or overwintering habitat.</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=200161</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95280"><p class="cl-3ec94158"><span class="cl-3ec6b05a">198882</span></p></td><td class="cl-3ec95288"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11303627</span></p></td><td class="cl-3ec95289"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Midday Creek</span></p></td><td class="cl-3ec95292"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Unnamed</span></p></td><td class="cl-3ec95293"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Stream crossing - CBS</span></p></td><td class="cl-3ec95294"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec9529c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec9529d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Habitat unsuitable for salmonids (though 1 Rainbow Trout captured). Organic bed likely leads to oxygen depletion in summer. </span></p></td><td class="cl-3ec9529e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Culvert is a barrier. Slow flows through summer. Abundant Sucker presence.</span></p></td><td class="cl-3ec9529f"><p class="cl-3ec94158"><span class="cl-3ec6b05a">https://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=200162</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">198883</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a">11303791</span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Midday Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Unnamed</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">None</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No structure</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Crossing does not exist</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=200163</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">55cd5d66-5bef-446f-bce3-8b097d001454</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Midday Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">n/a</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Dam</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Partial earthen dam with open channel at south end.</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">d0fe7d87-bba1-4edb-b132-01bdeccd7277</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Midday Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">n/a</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Dam</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No key upstream habitat</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Upstream of inaccessible wetland</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Area flooded by beavers. Unclear whether dam exists.</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec95244"><p class="cl-3ec94158"><span class="cl-3ec6b05a">197890</span></p></td><td class="cl-3ec95245"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td><td class="cl-3ec9524c"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Brook Creek</span></p></td><td class="cl-3ec9524d"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Kettle Valley Railway</span></p></td><td class="cl-3ec9524e"><p class="cl-3ec94158"><span class="cl-3ec6b05a">None</span></p></td><td class="cl-3ec95256"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable</span></p></td><td class="cl-3ec95257"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec95258"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Passable</span></p></td><td class="cl-3ec95259"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Burned out bridge with debris in stream but not blocking passage.</span></p></td><td class="cl-3ec95260"><p class="cl-3ec94158"><span class="cl-3ec6b05a">http://a100.gov.bc.ca/pub/pscismap/imageViewer.do?assessmentId=198910</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-3ec952a6"><p class="cl-3ec94158"><span class="cl-3ec6b05a">1011301807</span></p></td><td class="cl-3ec952a7"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td><td class="cl-3ec952a8"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Brook Creek</span></p></td><td class="cl-3ec952a9"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Unnamed</span></p></td><td class="cl-3ec952b0"><p class="cl-3ec94158"><span class="cl-3ec6b05a">None</span></p></td><td class="cl-3ec952b1"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No structure</span></p></td><td class="cl-3ec952b2"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Field assessment</span></p></td><td class="cl-3ec952ba"><p class="cl-3ec94158"><span class="cl-3ec6b05a">Crossing does not exist</span></p></td><td class="cl-3ec952bb"><p class="cl-3ec94158"><span class="cl-3ec6b05a">No road observed</span></p></td><td class="cl-3ec952bc"><p class="cl-3ec94158"><span class="cl-3ec6b05a"></span></p></td></tr></tbody></table></div>
+</div>
+</figure>
+</div>
 
 
 </section>
@@ -274,18 +310,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -317,11 +342,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -331,8 +395,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -344,7 +417,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -388,6 +584,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -413,6 +610,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -474,7 +697,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../content/supplementary-information.html" class="pagination-link">
+      <a href="../content/supplementary-information.html" class="pagination-link" aria-label="Supplementary Information">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Supplementary Information</span>
       </a>          
   </div>
@@ -482,6 +705,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
