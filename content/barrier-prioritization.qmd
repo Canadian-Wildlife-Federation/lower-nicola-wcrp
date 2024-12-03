@@ -12,6 +12,7 @@ warnings.filterwarnings('ignore')
 library(reticulate)
 api <- import("python.api_calls")
 gain <- api$gain
+gain_rear <- api$gain_rear
 
 source("Rscripts/table_formatting.R")
 
@@ -43,7 +44,7 @@ ft
 ```
 
 ## Longitudinal Field Assessment Ranking Process {-}
-A primary outcome of the WCRP will be the rehabilitation of barriers to connectivity in the Lower Nicola River Watershed. To achieve the goals in this plan, it is necessary to identify a set of structures that, if rehabilitated, will provide access to a minimum of 52 km of rearing habitat (@tbl-table16):
+A primary outcome of the WCRP will be the rehabilitation of barriers to connectivity in the Lower Nicola River Watershed. To achieve the goals in this plan, it is necessary to identify a set of structures that, if rehabilitated, will provide access to a minimum of `r gain_rear` km of rearing habitat (@tbl-table16):
 
 ```{python echo=FALSE}
 #| label: tbl-table16
