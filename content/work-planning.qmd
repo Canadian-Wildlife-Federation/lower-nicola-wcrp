@@ -57,7 +57,7 @@ def highlighttab7(val):
 `{\tiny`{=latex}
 ```{python opplan, echo=FALSE}
 #| label: tbl-opplan
-#| tbl-cap: "Operational plan to support the implementation of strategies and actions to improve connectivity for target species in the Lower Nicola River watershed."
+#| tbl-cap: "Operational plan to support the implementation of strategies and actions to improve connectivity for focal species in the Lower Nicola River watershed."
 #| warning: false
 #| echo: false
 

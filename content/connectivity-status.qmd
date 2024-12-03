@@ -22,7 +22,7 @@ library(reticulate)
 
 ## Connectivity Status Assessment {-}
 
-The planning team identified three Key Ecological Attributes (KEAs) and associated indicators to assess the current connectivity status of the watershed for each focal species – Accessible Off-channel Thermal Refuge, Accessible Spawning Habitat, and Accessible Rearing Habitat (@tbl-connectivity). KEAs are the key aspects of anadromous salmon habitat that are being targeted by this WCRP. For each KEA, an associated indicator was assigned to measure the status of that KEA. The connectivity status indicators were used to establish goals to improve key habitat connectivity over time and is the baseline against which progress is tracked over time
+The planning team identified three Key Ecological Attributes (KEAs) and associated indicators to assess the current connectivity status of the watershed for each focal species – Accessible Off-channel Thermal Refuge, Accessible Spawning Habitat, and Accessible Rearing Habitat (see @tbl-connectivity). KEAs are the key aspects of anadromous salmon habitat that are being targeted by this WCRP. For each KEA, an associated indicator was assigned to measure the status of that KEA. The connectivity status indicators were used to establish goals to improve key habitat connectivity over time and is the baseline against which progress is tracked over time
 
 The current connectivity status was estimated using three spatial models:
 
@@ -37,7 +37,7 @@ The current connectivity status was estimated using three spatial models:
 #| echo: false
 
 #| label: tbl-connectivity
-#| tbl-cap: "Connectivity status assessment for thermal refuge (a), spawning (b), and rearing (c) habitat in the Lower Nicola River watershed. The Accessible Spawning Habitat and Accessible Rearing Habitat KEAs are evaluated by dividing the length of linear habitat (of each type) that is currently accessible to target species by the total length of all linear habitat (of each type) in the watershed."
+#| tbl-cap: "Connectivity status assessment for thermal refuge (a), spawning (b), and rearing (c) habitat in the Lower Nicola River watershed. The Accessible Spawning Habitat and Accessible Rearing Habitat KEAs are evaluated by dividing the length of linear habitat (of each type) that is currently accessible to focal species by the total length of all linear habitat (of each type) in the watershed."
 #| warning: false
 #| echo: false
 
@@ -59,7 +59,7 @@ df
 
 
 
-**Comments:** Indicator rating definitions are based on the consensus decisions of the planning team, including the decision not to define Fair. The current status is based on the CWF Barrier Prioritization Model output, which is current as of March 2022.
+**Comments:** Indicator rating definitions are based on the consensus decisions of the planning team, including the decision not to define Fair. The current status is based on the CWF Structure Prioritization Model output, which is current as of March 2022.
 
 ```{python echo=FALSE}
 
@@ -72,7 +72,7 @@ df
 
 ```{python echo=FALSE}
 #| label: tbl-goals
-#| tbl-cap: "Goals to improve (1) off-channel thermal refuge, (2) spawning, and (3) rearing habitat connectivity for target species in the Lower Nicola River watershed over the lifespan of the WCRP (2021-2031). The goals were established through discussions with the planning team and represent the resulting desired state of connectivity in the watershed. The goals are subject to change as more information and data are collected over the course of the plan timeline (e.g., the current connectivity status is updated based on barrier field assessments)."
+#| tbl-cap: "Goals to improve (1) off-channel thermal refuge, (2) spawning, and (3) rearing habitat connectivity for focal species in the Lower Nicola River watershed over the lifespan of the WCRP (2021-2031). The goals were established through discussions with the planning team and represent the resulting desired state of connectivity in the watershed. The goals are subject to change as more information and data are collected over the course of the plan timeline (e.g., the current connectivity status is updated based on barrier field assessments)."
 #| warning: false
 #| echo: false
 
