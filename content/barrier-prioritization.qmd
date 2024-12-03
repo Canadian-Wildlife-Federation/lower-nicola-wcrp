@@ -19,7 +19,30 @@ source("Rscripts/table_formatting.R")
 
 # Structure Prioritization {-}
 
-## Field Assessment Ranking Process {-}
+### Lateral Barriers (Including to thermal refugia) {.unnumbered}
+
+There is a lack of comprehensive data and mapping of lateral barriers and potential thermal refugia in the watershed to support a strategic prioritization currently (see Action 1.3). However, local knowledge was used to compile a list of candidate sites for field verification as a starting point to improve lateral and thermal connectivity.
+
+```{r remove, echo = FALSE, results = 'asis'}
+#| label: tbl-lateral
+#| tbl-cap: "Identified priority lateral barrier remediation sites for field assessment in the Lower Nicola River watershed. UTM northing and eastings refer to Zone 10."
+#| warning: false
+#| echo: false
+
+library("flextable")
+
+data <- read.csv("data/lateral_barriers.csv", check.names=FALSE)
+ft <- flextable(data) |> colformat_num(big.mark = "", decimal.mark = ".", digits = 2) 
+ft <- bg(ft, bg = "#008270", part = "header")
+ft <- color(ft, color = "white", part = "header")
+ft <- set_caption(ft)
+ft <- align_text_col(ft, align = "left", header = TRUE)
+ft <- align_nottext_col(ft, align = "left", header = TRUE)
+ft <- width(ft, width = 2)
+ft 
+```
+
+## Longitudinal Field Assessment Ranking Process {-}
 A primary outcome of the WCRP will be the rehabilitation of barriers to connectivity in the Lower Nicola River Watershed. To achieve the goals in this plan, it is necessary to identify a set of structures that, if rehabilitated, will provide access to a minimum of 39 km of rearing habitat (@tbl-table16):
 
 ```{python echo=FALSE}
@@ -51,7 +74,7 @@ After all existing data and knowledge are collated for known and modelled crossi
 Field assessments are based on the [BC Fish Passage Strategic Approach](https://www2.gov.bc.ca/assets/gov/environment/plants-animals-and-ecosystems/fish-fish-habitat/fish-passage/strategic20approach20july202014.pdf) and can include a barrier assessment (i.e., evaluating passability of the structure), a habitat confirmation (i.e., evaluation of whether the upstream habitat is suitable for the focal species and whether there are other undocumented anthropogenic or natural barriers upstream or downstream), or a detailed habitat investigation (e.g., a fish passage study or further in-depth analysis of habitat features in a waterbody).
 The ranking process accounts for the long-term and immediate potential habitat gains potentially offered by each structure to identify structures that maximize long-term and immediate potential to improve key habitat connectivity in the watershed. All structures in the watershed (excluding those confirmed as passable) are ranked in each iteration of the ranking process. Details of the ranking process used to guide field assessments can be found in [Appendix B](supplimentary-information.qmd).
 
-## Structure Prioritization Summary {-}
+## Longitudinal Structure Prioritization Summary {-}
 
 Following field assessments, structures are placed on one of five possible lists:
 
@@ -102,40 +125,4 @@ ft <- format_flextable(ft)
 ft
 ```
 
-### Lateral Barriers (Including to thermal refugia) {.unnumbered}
-
-There is a lack of comprehensive data and mapping of lateral barriers and potential thermal refugia in the watershed to support a strategic prioritization currently (see Action 1.3). However, local knowledge was used to compile a list of candidate sites for field verification as a starting point to improve lateral and thermal connectivity. 
-
-### Longitudinal Barriers {.unnumbered}
-
-To achieve Goals 2 and 3 in this plan, it is necessary to prioritize and identify a suite of barriers that, if rehabilitated, will provide access to a minimum of 39 km of modelled rearing habitat (@tbl-table16). 
-
-The structure prioritization process comprises three stages: 
-
-Stage 1: preliminary barrier list 
-
-Stage 2: intermediate barrier list 
-
-Stage 3: priority barrier list 
-
-Initially, the structure prioritization analysis ranked all barriers in the watershed by the amount of habitat blocked to produce a "preliminary barrier list", which also accounted for assessing "sets" of structures for which remediation could be coordinated to maximize connectivity gains. From this list, the top-ranking subset of barriers - comprising more barriers than are needed to achieve the goals - is selected to produce an "intermediate barrier list". Barriers that did not rank highly in the model results, but were identified as priority barriers for rehabilitation by the local partners were also added to the intermediate barrier list. A longer list of barriers is needed due to the inherent assumptions and uncertainty in the connectivity and habitat models and gaps in available data. Crossings that have been modelled (i.e., points where streams and road/rail networks intersect) are assumed to be barriers until field verification is undertaken and structures that have been assessed as "potential" barriers (e.g., may be passable at certain flow levels or for certain life history stages) require further investigation before a definitive remediation decision is made. Additionally, the habitat model identifies waterbodies that have the potential to support spawning or rearing habitat for target species but does not attempt to quantify [habitat quality or suitability](data-methods.qmd), which will require additional field verification once barrier assessments have completed. As such, the intermediate barrier list below (@tbl-intermediate) should be considered as a starting point in the prioritization process and represents structures that are a priority to evaluate further through barrier assessment and habitat confirmations because some structures will likely be passable, others will not be associated with usable habitat, and others may not be feasible to rehabilitate because of logistic considerations. 
-
-The intermediate barrier list was updated following the barrier assessments and habitat confirmations that were undertaken during the 2021 field season - some barriers were moved forward to the "priority barriers for rehabilitation list" (@tbl-priority) and others were eliminated from consideration due to one or more of the considerations discussed in @tbl-remove. The priority barrier for rehabilitation list represents structures that were confirmed to be partial or full barriers to fish passage and that block access to confirmed habitat. Barriers on the priority list were reviewed by planning team members and selected for inclusion for proactive pursual of rehabilitation  For more details on the structure prioritization model, please see @Mazany-Wright2021-rz. 
-
-Based on the results of the prioritization analysis, 15 barriers from the priority and intermediate barrier list are required to be rehabilitated to achieve the connectivity goals in this plan: 
-
-
-```{r remcost, echo = FALSE, results = 'asis'}
-#| label: tbl-remcost
-#| tbl-cap: "Preliminary barrier rehabilitation cost estimate to reach connectivity goals in the Lower Nicola River watershed. Cost per barrier values are estimated based on the average cost of previously completed projects. Barrier counts and total costs are subject to change as more information is collected through the implementation of this plan."
-#| warning: false
-#| echo: false
-
-library("flextable")
-
-data <- read.csv("data/remediation-cost.csv", check.names=FALSE)
-ft <- flextable(data)
-ft <- format_flextable(ft)
-ft
-```
 
