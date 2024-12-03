@@ -36,7 +36,7 @@ The current connectivity status was estimated using three spatial models:
 #| warning: false
 #| echo: false
 
-#| label: tbl-connectivity
+#| label: tbl-connectivityy
 #| tbl-cap: "Connectivity status assessment for thermal refuge (a), spawning (b), and rearing (c) habitat in the Lower Nicola River watershed. The Accessible Spawning Habitat and Accessible Rearing Habitat KEAs are evaluated by dividing the length of linear habitat (of each type) that is currently accessible to focal species by the total length of all linear habitat (of each type) in the watershed."
 #| warning: false
 #| echo: false
