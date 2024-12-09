@@ -41,7 +41,7 @@ The current connectivity status was estimated using three spatial models:
 #| warning: false
 #| echo: false
 
-df = conn_table.make_assess_table("Andromous Salmon", "Available off-channel Thermal Refuge", "Total Area (m2) of thermal refuge accessible", "?", " ?", "? ", api.connect)
+df = conn_table.make_assess_table("Anadromous Salmon", "Available off-channel Thermal Refuge", "Total Area (m2) of thermal refuge accessible", "?", " ?", "? ", api.connect)
 df
 
 
