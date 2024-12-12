@@ -22,7 +22,7 @@ library(reticulate)
 
 ## Connectivity Status Assessment {-}
 
-The planning team identified three Key Ecological Attributes (KEAs) and associated indicators to assess the current connectivity status of the watershed for each focal species: – Accessible Off-channel Thermal Refuge, Accessible Spawning Habitat, and Accessible Rearing Habitat. KEAs are the key aspects of anadromous salmon habitat that are being targeted by this WCRP. For each KEA, an associated indicator was assigned to measure the status of that KEA. The connectivity status indicators were used to establish goals to improve key habitat connectivity over time and is the baseline against which progress is tracked over time
+The planning team identified three Key Ecological Attributes (KEAs) and associated indicators to assess the current connectivity status of the watershed for each focal species: Accessible Off-channel Thermal Refuge, Accessible Spawning Habitat, and Accessible Rearing Habitat. KEAs are the key aspects of anadromous salmonid habitat that are being targeted by this WCRP. For each KEA, an associated indicator was assigned to measure the status of that KEA. The connectivity status indicators were used to establish goals to improve key habitat connectivity over time, and are the baseline against which progress is tracked over time. 
 
 The current connectivity status was estimated using three spatial models:
 
@@ -41,7 +41,7 @@ The current connectivity status was estimated using three spatial models:
 #| warning: false
 #| echo: false
 
-df = conn_table.make_assess_table("Anadromous Salmon", "Available off-channel Thermal Refuge", "Total Area (m2) of thermal refuge accessible", "?", " ?", "? ", api.connect)
+df = conn_table.make_assess_table("Anadromous Salmonids", "Available off-channel Thermal Refuge", "Total Area (m2) of thermal refuge accessible", "?", " ?", "? ", api.connect)
 df
 
 
@@ -52,7 +52,7 @@ df
 ```{python echo=FALSE}
 #| warning: false
 #| echo: false
-df = conn_table.make_assess_table("Focal Species", "Available Spawning Habitat", "% of total linear spawning habitat accessible", 25, 50, 75, api.connect_spawn)
+df = conn_table.make_assess_table("Anadromous Salmonids", "Available Spawning Habitat", "% of total linear spawning habitat accessible", 25, 50, 75, api.connect_spawn)
 df
 
 ```

@@ -8,9 +8,9 @@ The following situation model was developed by the WCRP planning team to “map�
 
 ## Strategies & Actions {-}
 
-In 2021, the Lower Nicola River watershed and many other parts of BC experienced devastating forest fires and floods. Prior to this, CWF worked with the Scw’exmx Tribal Council to assess priority barriers for rehabilitation that were identified through longitudinal models and undertake preliminary assessments of local priorities for potential lateral connectivity rehabilitation. Recognizing that there may be other urgent restoration priorities in the watershed, the Planning Team decided that the current areas of focus will be on reviewing LiDAR, aerial imagery, and field assessments to determine immediate lateral connectivity needs (see Action 1.5 below), responding to new barriers that may have developed in the watershed, and addressing other emerging needs in the watershed. The Planning Team will focus on the remaining strategies and actions in the table below in future years.
+In 2021, the Lower Nicola River watershed and many other parts of BC experienced devastating forest fires and floods. Prior to this, CWF worked with the Scw’exmx Tribal Council to assess high-ranking structures and undertake preliminary assessments of potential lateral barriers identified by local experts and knowledge holders. Recognizing that there may be other urgent restoration priorities in the watershed, the Planning Team decided that the areas of focus over the short term would be on reviewing LiDAR (light detection and ranging), aerial imagery, and field assessments to determine immediate lateral connectivity needs (see Action 1.5 below), responding to new barriers that may have developed in the watershed following the atmospheric river event, and addressing other emerging needs in the watershed. The Planning Team began focusing on the remaining strategies and actions in the table below @tbl-S1 in 2023. 
 
-Effectiveness evaluation of identified conservation strategies and associated actions to improve connectivity for focal species in the Lower Nicola River watershed. The planning team identified five broad strategies to implement through this WCRP: (1) lateral barrier rehabilitation (priority on reconnecting thermal refugia), (2) stream crossing rehabilitation, (3) dam rehabilitation, (4) barrier prevention, and (5) progress tracking plan. Individual actions were qualitatively evaluated based on the anticipated effect each action will have on realizing on-the-ground gains in connectivity. Effectiveness ratings are based on a combination of "Feasibility" and "Impact". Feasibility is defined as the degree to which the project team can implement the action within realistic constraints (financial, time, ethical, etc.) and Impact is the degree to which the action is likely to contribute to achieving one or more of the goals established in this plan.
+The planning team identified five broad strategies to implement through this WCRP: (1) lateral barrier rehabilitation (priority on reconnecting thermal refugia), (2) stream crossing rehabilitation, (3) dam rehabilitation, (4) barrier prevention, and (5) partner development. Individual actions were qualitatively evaluated based on the anticipated effect each action will have on realizing on-the-ground gains in connectivity. Effectiveness ratings are based on a combination of "Feasibility" and "Impact." Feasibility is defined as the degree to which the project team can implement the action within realistic constraints (financial, time, ethical, etc.), and Impact is the degree to which the action is likely to contribute to achieving one or more of the goals established in this plan.
 
 ## Strategy 1: Lateral Barrier Rehabilitation {-}
 ```{python echo=FALSE}
@@ -125,7 +125,7 @@ data.set_table_styles(
 
 ```
 
-## Strategy 5: Communication and Education {-}
+## Strategy 5: Partner Development {-}
 ```{python echo=FALSE}
 #| label: tbl-S5
 #| tbl-cap: "Strategy 5"
@@ -149,15 +149,15 @@ data.set_table_styles(
 
 ## Theories of Change & Objectives {-}
 
-Theories of Change explicitly state assumptions around how the identified actions will achieve gains in connectivity and contribute to achieving the goals of the plan. To develop theories of change, the planning team developed explicit assumptions for each strategy which helped to clarify the rationale used for undertaking actions and provided an opportunity for feedback on invalid assumptions or missing opportunities. The theories of change are results oriented and clearly define the expected outcome. The following theory of change models were developed by the WCRP planning team to “map” the causal (“if-then”) progression of assumptions of how the actions within a strategy work together to achieve project goals. 
+Theories of Change explicitly state assumptions about how the identified actions will achieve gains in connectivity and contribute to achieving the goals of the plan. To develop theories of change, the planning team made explicit assumptions for each strategy to clarify the rationale used for undertaking actions and provided an opportunity for feedback on invalid assumptions or missing opportunities. The theories of change are results oriented and clearly define the expected outcome. The following Theories of Change models were developed by the WCRP planning team to “map” the causal (“if-then”) progression of assumptions of how the actions within a strategy work together to achieve project goals. 
 
-![Theory of change developed by the planning team for the actions identified under Strategy 1: Lateral Barrier Rehabilitation in the Lower Nicola River watershed.](images/flowchart-lat-bar-rem.png){#fig-stra1}
+![Theories of change model developed by the planning team for the actions identified under Strategy 1: Lateral Barrier Rehabilitation in the Lower Nicola River watershed.](images/flowchart-lat-bar-rem.png){#fig-stra1}
 
-![Theory of change developed by the planning team for the actions identified under Strategy 2: Stream Crossing Rehabilitation in the Lower Nicola River watershed.](images/flowchart-crossing-rem.png){#fig-stra2}
+![Theories of change model developed by the planning team for the actions identified under Strategy 2: Stream Crossing Rehabilitation in the Lower Nicola River watershed.](images/flowchart-crossing-rem.png){#fig-stra2}
 
-![Theory of change developed by the planning team for the actions identified under Strategy 3: Dam Rehabilitation in the Lower Nicola River watershed.](images/flowchart-dam-rem.png){#fig-stra3}
+![Theories of change model developed by the planning team for the actions identified under Strategy 3: Dam Rehabilitation in the Lower Nicola River watershed.](images/flowchart-dam-rem.png){#fig-stra3}
 
-![Theory of change developed by the planning team for the actions identified under Strategy 4: Barrier Prevention in the Lower Nicola River watershed.](images/flowchart-bar-prevent.png){#fig-stra4}
+![Theories of change model developed by the planning team for the actions identified under Strategy 4: Barrier Prevention in the Lower Nicola River watershed.](images/flowchart-bar-prevent.png){#fig-stra4}
 
 ## Funding Sources {-}
 ```{r fund, echo = FALSE, results = 'asis'}
