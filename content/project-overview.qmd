@@ -118,7 +118,7 @@ ft <- set_caption(ft)
 #ft |> autofit() 
 ```
 
-Coho Salmon begin to return to the watershed in September, with spawning beginning in late October and continuing through December. The population has been in decline since the mid 1980s (@DFO1991-tl, @Ecoscape2017). Coho Salmon stocks have been supplemented in recent decades by outplants from the Spius Creek Hatchery (@Ecoscape2017). The majority of Coho Salmon spawning and rearing occurs in the Coldwater River, Spius Creek, and Maka Creek, but has also been observed in Clapperton Creek, Prospect Creek, and the Upper Nicola River and Moore Creek (@LGL2007, PSF 2020). The lower reaches of many smaller tributaries are also important Coho Salmon rearing habitat.
+Coho Salmon begin to return to the watershed in September, with spawning beginning in late October and continuing through December. The population has been in decline since the mid 1980s (@DFO1991-tl, @Ecoscape2017). Coho Salmon stocks have been supplemented in recent decades by outplants from the Spius Creek Hatchery (@Ecoscape2017). The majority of Coho Salmon spawning and rearing occurs in the Coldwater River, Spius Creek, and Maka Creek, but has also been observed in Clapperton Creek, Prospect Creek, and the Upper Nicola River and Moore Creek (@LGL2007, @PSF2024-tl). The lower reaches of many smaller tributaries are also important Coho Salmon rearing habitat.
 
 ### Steelhead \| cóʕʷłeʔ \| Oncorhynchus mykiss {.unnumbered}
 
