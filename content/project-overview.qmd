@@ -277,8 +277,8 @@ def rating(threat, barrier):
 
 
 df = pd.DataFrame({"Structure Types":["Lateral Barriers (including to thermal connectivity)", "Natural Barriers","Road-Stream Crossings","Small Dams(<5m height)", "Abandoned Rail-stream Crossings (longitudinal)","Trail-stream Crossings"],
-                   "Extent":["High" ,"High", rating("extent", "ROAD"), rating("extent", "DAM"), "Low","Low"],
-                   "Severity":["Very High","Very High",rating("severity", "ROAD"), rating("severity", "DAM"),"Low","Low"],
+                   "Extent":["High" ,"High", "High", "Low", "Low","Low"],
+                   "Severity":["Very High","Very High","Very High", "Very High","Low","Low"],
                    "Irreversibility":["Medium","Medium","Low", "Medium", "Medium", "Low"],
                    "Overall Threat Rating:":["High","High","Medium", "Low", "Low", "Low"]
                    }).style.set_properties(subset=["Overall Threat Rating:"], **{'font-weight': 'bold'})

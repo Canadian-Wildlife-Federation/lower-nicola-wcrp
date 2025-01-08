@@ -38,7 +38,7 @@ df = pd.DataFrame({"Habitat Type":["Rearing"],
                    "Currently accessible (km)":[str(api.access_rear)],
                    "Total": [str(api.total_rear)],
                    "Current Connectivity Status":[str(api.connect_rear)+"%"],
-                   "Goal": ["96%"],
+                   "Goal": ["90%"],
                    "Gain required (km)": [str(api.gain_rear)]
                    })
 
