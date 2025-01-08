@@ -30,7 +30,7 @@ The current connectivity status was estimated using three spatial models:
 
 2.	Habitat model: A subset of the naturally accessible waterbody layer was defined as key habitat, i.e., habitat likely to support spawning or rearing, rather than simply movement corridors. The habitat model identifies areas within waterbodies that have a higher potential to support key habitat based on stream channel gradient and discharge. The habitat model criteria can be found in  (@tbl-additional-params).
 
-3.	Connectivity model: A layer of known or modelled structures was overlaid  on the key habitat results. Structures  with unknown passability were treated as a full barrier until confirmed passable by either local knowledge, desktop review, or field assessment. Watershed connectivity was estimated by calculating the amount of key habitat that is connected to the ocean (i.e., not fragmented by human-made barriers). Key habitat with no structures or only passable structures downstream was considered connected. Key habitat upstream of full, partial, or potential barriers was considered disconnected. All connected habitat was summed and divided by the total amount of key habitat in the watershed to arrive at the KEA indicators. Detailed methods for the connectivity model can be found in [Appendix C](data-methods.qmd)
+3.	Connectivity model: A layer of known or modelled structures was overlaid  on the key habitat results. Structures  with unknown passability were treated as a full barrier until confirmed passable by either local knowledge, desktop review, or field assessment. Watershed connectivity was estimated by calculating the amount of key habitat that is connected to the ocean (i.e., not fragmented by human-made barriers). Key habitat with no structures or only passable structures downstream was considered connected. Key habitat upstream of full, partial, or potential barriers was considered disconnected. All connected habitat was summed and divided by the total amount of key habitat in the watershed to arrive at the KEA indicators. Detailed methods for the connectivity model can be found in [Appendix C](data-methods.qmd).
 
 ```{python echo=FALSE}
 #| warning: false
@@ -41,7 +41,7 @@ The current connectivity status was estimated using three spatial models:
 #| warning: false
 #| echo: false
 
-df = conn_table.make_assess_table("Anadromous Salmonids", "Available off-channel Thermal Refuge", "Total Area (m2) of thermal refuge accessible", "?", " ?", "? ", api.connect)
+df = conn_table.make_assess_table("Anadromous salmonids", "Available off-channel Thermal Refuge", "Total Area (m2) of thermal refuge accessible", "?", " ?", "? ", api.connect)
 df
 
 
@@ -52,7 +52,7 @@ df
 ```{python echo=FALSE}
 #| warning: false
 #| echo: false
-df = conn_table.make_assess_table("Anadromous Salmonids", "Available Spawning Habitat", "% of total linear spawning habitat accessible", 25, 50, 75, api.connect_spawn)
+df = conn_table.make_assess_table("Anadromous salmonids", "Available Spawning Habitat", "% of total linear spawning habitat accessible", 25, 50, 75, api.connect_spawn)
 df
 
 ```
@@ -63,10 +63,11 @@ df
 
 ```{python echo=FALSE}
 
-df = conn_table.make_assess_table("Anadromous Salmonids", "Available Rearing Habitat", "% of total linear rearing habitat accessible", 25, 50, 75, api.connect_rear)
+df = conn_table.make_assess_table("Anadromous salmonids", "Available Rearing Habitat", "% of total linear rearing habitat accessible", 25, 50, 75, api.connect_rear)
 df
 
 ```
+**Comments:** Indicator rating definitions are based on the consensus decisions of the planning team, including the decision not to define Fair. The current status is based on the connectivity model output, which is current as of December 2024.
 
 ## Goals {-}
 

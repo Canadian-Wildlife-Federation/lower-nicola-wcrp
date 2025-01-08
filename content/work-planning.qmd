@@ -25,3 +25,19 @@ ft
 ## Operational Plan {.unnumbered}
 
 The operational plan represents a preliminary exercise undertaken by the planning team to identify the potential leads, potential participants, and estimated cost for the implementation of each action in the Lower Nicola River watershed. @tbl-keyact summarizes individuals, groups, or organizations that the planning team felt could lead or participate in the implementation of the plan and should be interpreted as the first step in ongoing planning and engagement to develop more detailed and sophisticated action plans for each entry in the table. The individuals, groups, and organizations listed under the "Lead(s)", or "Potential Participants" columns are those that provisionally expressed interest in participating in one of those roles or were suggested by the planning team for further engagement (denoted in bold), for those that are not members of the planning team. The leads, participants, and estimated costs in the operational plan are not binding nor an official commitment of resources; but rather provide a roadmap for future coordination and engagement during the WCRP implementation.
+
+```{r params, echo = FALSE, results = 'asis'}
+#| label: opp-plan
+#| tbl-cap: "2023 operational plan for the Lower Nicola Watershed."
+#| warning: false
+
+library("flextable")
+
+data <- read.csv("data/operational-plan.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- bg(ft, bg = "#008270", part = "header")
+ft <- color(ft, color = "white", part = "header")
+ft <- set_caption(ft)
+ft <- width(ft, width = 1)
+ft 
+```
