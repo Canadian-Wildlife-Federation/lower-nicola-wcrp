@@ -10,8 +10,8 @@ book:
   chapters:
     - index.qmd
     - content/project-overview.qmd
-    - content/connectivity-status.qmd
-    - content/barrier-prioritization.qmd
+    - content/methods-definitions.qmd
+    - content/connectivity-status-ranking.qmd
     - content/work-planning.qmd
     - content/progress-reporting.qmd
     - content/references.qmd
