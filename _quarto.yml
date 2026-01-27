@@ -13,13 +13,16 @@ book:
     - content/connectivity-status.qmd
     - content/barrier-prioritization.qmd
     - content/work-planning.qmd
+    - content/progress-reporting.qmd
     - content/references.qmd
     - content/version-history.qmd
   appendices: 
     - content/project-partners.qmd
-    - content/supplementary-information.qmd 
+    - content/non-actionable-barriers.qmd
+    - content/excluded-structures.qmd
     - content/data-methods.qmd
-  
+    - content/supplementary-information.qmd
+
   
   sidebar: 
     pinned: true

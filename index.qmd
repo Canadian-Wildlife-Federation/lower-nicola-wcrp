@@ -14,10 +14,18 @@ been confirmed as barriers with habitat upstream and # require further field ass
 In the Lower Nicola watershed, # km of Pacific Salmon habitat are currently connected to the ocean and #km is disconnected from it. This
 represents that #% of the # km of total habitat is connected.
 
-## Habitat Accumulation Curve {.unnumbered}
+## Habitat Accumulation Curve | Map {.unnumbered}
+![Figure X: Habitat Accumulation Curve (HAC) showing structures in the [specific location] watershed as of [x date]. Structures are ranked based on how much (km) habitat is upstream to the next structure or set of structures and that would be reconnected if the structure(s) became passable. Sets of structures are indicated by a grey line below the curve, indicating that gains from addressing the downstream structure alone would be less than the combined gains from addressing all structures in the set. Habitat upstream of data-deficient structures is considered disconnected until field assessments are completed. Structures that were excluded as passable are not shown; however, rehabilitated barriers are shown to demonstrate the connectivity gains achieved through implementation of this plan.
+
+Figure Y: Map of [focal species] habitat and structures that are confirmed or potential barriers to fish
+passage in the [specific location] watershed as of [x date]. Structure data were obtained from the
+Canadian Aquatic Barriers Database (aquaticbarriers.ca). The accessibility model represents areas of the watershed that [focal species] could access naturally in the absence of anthropogenic barriers. The habitat model represents the subset of accessible areas that may be used by [focal species] for [key habitat function(s)]. Available local knowledge and data were incorporated and overrule habitat model results. Thick light-blue lines represent habitat that is currently connected, whereas thick red lines represent habitat considered to be disconnected because it is upstream of confirmed barriers or data-deficient structures. The y-axis represents the amount of habitat (km) blocked by each structure, discounted by 50% for first-order streams, and by passability (25%, 50%, 0r 75%) of partial barriers. Barriers that were rehabilitated through implementation of this plan are shown, but other excluded structures (e.g., those found to be passable) are not.]
+(images/hac-map-lnic.png)
+
 
 ## Progress Summary {.unnumbered}
 
 include initiation date (or just year), # field assessments completed, # barriers addressed, amount (km) of habitat reconnected.Additional brief text about other actions, if completed (e.g., drone surveys in the Lower Nicola).
+
 
 

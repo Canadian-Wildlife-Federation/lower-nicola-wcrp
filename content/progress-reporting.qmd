@@ -1,0 +1,23 @@
+# Progress Reporting
+
+## Progress Summary {.unnumbered}
+
+## Annual Progress Report {.unnumbered}
+
+The Lower Nicola Indian Band, Nooaitch Band, and Scw’exmx Tribal Council completed in-depth barrier assessments and habitat confirmations at several sites (Stumbles, Kwinshatin, Brook, Murray Lake, Midday creeks). In addition, initial results from CWF’s drone imagery project to identify thermal refugia were developed and reviewed at a working group meeting with program partners in 2023. 
+
+```{r params, echo = FALSE, results = 'asis'}
+#| label: tbl-param
+#| tbl-cap: "2023 work plan for the Lower Nicola Watershed."
+#| warning: false
+
+library("flextable")
+
+data <- read.csv("data/work-plan.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- bg(ft, bg = "#008270", part = "header")
+ft <- color(ft, color = "white", part = "header")
+ft <- set_caption(ft)
+ft <- width(ft, width = 1)
+ft 
+```
