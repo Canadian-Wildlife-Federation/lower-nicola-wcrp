@@ -1,7 +1,7 @@
 # Non-Actionable Barriers {-}
 ```{r params, echo = FALSE, results = 'asis'}
 #| label: tbl-param
-#| tbl-cap: "Non-Actionable Barriers."
+#| tbl-cap: "Non-Actionable Barriers"
 #| warning: false
 
 library("flextable")

@@ -22,8 +22,7 @@ source("Rscripts/table_formatting.R")
 
 ## Current Connectivity Status {-}
 
-
-```{python echo=FALSE}
+##```{python echo=FALSE}
 #| warning: false
 #| echo: false
 
@@ -37,22 +36,18 @@ df
 
 
 ```
-
 **Comments:** No baseline data exists on the extent of overwintering habitat in the watershed. A priority action is included in the Operational Plan (strategy 2.3) to develop a habitat layer, and this will be used to inform this connectivity status assessment in the future.
 
-```{python echo=FALSE}
+##```{python echo=FALSE}
 #| warning: false
 #| echo: false
 df = conn_table.make_assess_table("Anadromous salmonids", "Available Spawning Habitat", "% of total linear spawning habitat accessible", 25, 50, 75, api.connect_spawn)
 df
 
 ```
-
-
-
 **Comments:** Indicator rating definitions are based on the consensus decisions of the planning team, including the decision not to define Fair. The current status is based on the connectivity model output, which is current as of December 2024.
 
-```{python echo=FALSE}
+##```{python echo=FALSE}
 
 df = conn_table.make_assess_table("Anadromous salmonids", "Available Rearing Habitat", "% of total linear rearing habitat accessible", 25, 50, 75, api.connect_rear)
 df
@@ -61,7 +56,7 @@ df
 **Comments:** Indicator rating definitions are based on the consensus decisions of the planning team, including the decision not to define Fair. The current status is based on the connectivity model output, which is current as of December 2024.
 
 
-```{python echo=FALSE}
+##```{python echo=FALSE}
 #| label: tbl-goals
 #| tbl-cap: "Goals to improve (1) off-channel thermal refuge, (2) spawning, and (3) rearing habitat connectivity for focal species in the Lower Nicola River watershed over the lifespan of the WCRP (2021-2031). The goals were established through discussions with the planning team and represent the resulting desired state of connectivity in the watershed. The goals are subject to change as more information and data are collected over the course of the plan timeline (e.g., the current connectivity status is updated based on barrier field assessments)."
 #| warning: false
