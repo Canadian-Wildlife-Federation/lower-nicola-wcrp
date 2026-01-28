@@ -6,6 +6,7 @@ import python.connectivity_assess as conn_table
 
 warnings.filterwarnings('ignore')
 ```
+
 ```{r}
 #| echo: false
 #| warning: false
@@ -79,4 +80,32 @@ data.set_table_styles(
 
 ```
 ## Ranked Structures Table {.unnumbered}
+
+```{python echo=FALSE}
+
+
+df = api.GetTrackingTableData()
+
+tableColumns = ['barrier_id','internal_name', 'rank_total_upstr_hab','avg_gain_per_barrier','priority', 'structure_list_status','next_steps']
+
+
+filtered_df = (
+    df
+      .loc[
+          df['structure_list_status'].notna(),
+          tableColumns
+      ]
+)
+
+data = filtered_df.style.hide().set_properties(**{'text-align': 'left'})
+
+data.set_table_styles(
+   [{
+       'selector': 'th',
+       'props': [('background-color', '#008270'),('text-align', 'left')]
+   }])
+
+
+
+```
 ## Habitat Accumulation Curve | Map {.unnumbered}
