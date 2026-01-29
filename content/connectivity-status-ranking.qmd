@@ -86,7 +86,7 @@ data.set_table_styles(
 
 df = api.GetTrackingTableData()
 
-tableColumns = ['barrier_id','internal_name', 'rank_total_upstr_hab','avg_gain_per_barrier','priority', 'structure_list_status','next_steps']
+tableColumns = ['barrier_id','internal_name','structure_list_status','rank_total_upstr_hab','avg_gain_per_barrier','priority', 'next_steps']
 
 
 filtered_df = (
