@@ -14,8 +14,7 @@ been confirmed as barriers with habitat upstream and # require further field ass
 
 ## Current Connectivity Status {.unnumbered}
 
-In the Lower Nicola watershed, # km of Pacific Salmon habitat are currently connected to the ocean and #km is disconnected from it. This
-represents that #% of the # km of total habitat is connected.
+In the Lower Nicola watershed, # structures potentially disconnect Pacific Salmon habitat. Of these, # are identified as barriers in need of rehabilitation (priority barriers), # barriers that do not warrant rehabilitation (non-actionable), and # require further field assessment.
 
 ## Habitat Accumulation Curve | Map {.unnumbered}
 
