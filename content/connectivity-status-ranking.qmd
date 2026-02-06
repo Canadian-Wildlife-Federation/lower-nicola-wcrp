@@ -95,9 +95,21 @@ filtered_df = (
           df['structure_list_status'].notna(),
           tableColumns
       ]
+      .sort_values('avg_gain_per_barrier', ascending=False)
 )
 
-data = filtered_df.style.hide().set_properties(**{'text-align': 'left'})
+display_df = filtered_df.rename(columns={
+    'barrier_id': 'Barrier ID',
+    'internal_name': 'Site Name',
+    'structure_list_status': 'Structure Status',
+    'rank_total_upstr_hab': 'Upstream Habitat Rank',
+    'avg_gain_per_barrier': 'Avg Habitat Gain',
+    'priority': 'Priority',
+    'next_steps': 'Next Steps'
+})
+
+
+data = display_df.style.hide().set_properties(**{'text-align': 'left'})
 
 data.set_table_styles(
    [{

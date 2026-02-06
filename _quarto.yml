@@ -16,13 +16,17 @@ book:
     - content/progress-reporting.qmd
     - content/references.qmd
     - content/version-history.qmd
-  appendices: 
-    - content/project-partners.qmd
-    - content/non-actionable-barriers.qmd
-    - content/excluded-structures.qmd
-    - content/data-methods.qmd
-    - content/supplementary-information.qmd
 
+    - part: "Appendix A"
+      chapters:
+        - content/project-partners.qmd
+        - content/data-methods.qmd
+        - content/supplementary-information.qmd
+
+    - part: "Appendix B"
+      chapters:
+        - content/non-actionable-barriers.qmd
+        - content/excluded-structures.qmd
   
   sidebar: 
     pinned: true

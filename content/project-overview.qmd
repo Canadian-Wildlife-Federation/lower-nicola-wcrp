@@ -16,12 +16,12 @@ Healthy, well-connected stream networks within the Lower Nicola River watershed 
 
 ![The primary geographic scope - the Lower Nicola River watershed, excluding the Guichon Creek drainage and the Nicola River and Quilchena Creek drainages upstream of Nicola Lake](images/geo-scope-lnic.png){#fig-geoscope}
 
-The primary geographic scope of this WCRP is the Lower Nicola River watershed, located in the Thompson drainage basin of the Fraser River system in south-central British Columbia drainage area 376,064 ha; (@fig-geoscope). The scope constitutes the Lower Nicola "watershed group" as defined by the British Columbia Freshwater Atlas (FWA), which excludes the Guichon Creek drainage and the Nicola River and Quilchena Creek drainages upstream of Nicola Lake. A consistent spatial framework was necessary to undertake a watershed-selection process at the provincial scale to identify target watersheds to improve freshwater connectivity for salmonids. The Lower Nicola River watershed was identified by the B.C. Fish Passage Restoration Initiative as one of four target watersheds for WCRP development (@Mazany-Wright2021-do). Culturally and economically important populations of Chinook Salmon (*Oncorhynchus tshawtyscha*), Coho Salmon (*Oncorhynchus kisutch*), and the anadromoius life history of Rainbow Trout commonly referred as steelhead (*Oncorhynchus mykiss*) are all found in the watershed, which historically supported Indigenous sustenance and trading economies (@tbl-targspec; @LNIB2015, @ESSA2019, @Coldwater2021).
+The primary geographic scope of this WCRP is the Lower Nicola River watershed, located in the Thompson drainage basin of the Fraser River system in south-central British Columbia drainage area 376,064 ha; (@fig-geoscope). The scope constitutes the Lower Nicola "watershed group" as defined by the British Columbia Freshwater Atlas (FWA), which excludes the Guichon Creek drainage and the Nicola River and Quilchena Creek drainages upstream of Nicola Lake. A consistent spatial framework was necessary to undertake a watershed-selection process at the provincial scale to identify target watersheds to improve freshwater connectivity for salmonids. The Lower Nicola River watershed was identified by the B.C. Fish Passage Restoration Initiative as one of four target watersheds for WCRP development (@Mazany-Wright2021-do). Culturally and economically important populations of Chinook Salmon (*Oncorhynchus tshawtyscha*), Coho Salmon (*Oncorhynchus kisutch*), and the anadromoius life history of Rainbow Trout commonly referred as steelhead (*Oncorhynchus mykiss*) are all found in the watershed, which historically supported Indigenous sustenance and trading economies [Table 1.1](#tbl-targspec) (@tbl-targspec; @LNIB2015, @ESSA2019, @Coldwater2021).
 
-```{r targspec, echo = FALSE, results = 'asis'}
-#| label: tbl-targspec
-#| tbl-cap: "Focal species in the Lower Nicola River watershed. The Nłeʔkepmxcín (Nlaka’pamuxcin), nqilxʷcn (nsyilxcən), and Western common and scientific species names are provided."
-#| warning: false
+
+<div id="tbl-targspec" class="table-caption">Table 1.1: Focal species in the Lower Nicola River watershed. The Nłeʔkepmxcín (Nlaka’pamuxcin), nqilxʷcn (nsyilxcən), and Western common and scientific species names are provided.</div>
+```{r echo = FALSE}
+
 
 library("flextable")
 
@@ -29,9 +29,9 @@ data <- read.csv("data/species_names.csv", check.names=FALSE)
 ft <- flextable(data)
 ft <- bg(ft, bg = "#008270", part = "header")
 ft <- color(ft, color = "white", part = "header")
-ft <- set_caption(ft)
-#ft <- autofit()
-ft |> autofit() 
+ft <- autofit(ft)
+#ft |> autofit() 
+ft
 ```
 
 The Lower Nicola River watershed comprises parts of the traditional territory of the Nlaka’pamux/Scw'exmx and Syilx Peoples, represented by the Scw’exmx Tribal Council, the four member nations (Coldwater Band, Nooaitch Band, Shackan Band, and Upper Nicola Band), and the individual nations of the Lower Nicola Indian Band and the Cook's Ferry Band. The Nlaka’pamux/Scw'exmx and Syilx peoples steward the land and the waters of the Lower Nicola River watershed. The planning team will pursue early, meaningful, and continued engagement with First Nations communities involved in work and projects related to this plan. It will be necessary to receive permission from the communities for any work to occur on their territory.
@@ -50,7 +50,7 @@ Localized thermal disconnectivity in the lateral dimension occurs when rearing a
 
 Mitigation of the landscape-scale drivers of changes to thermal regimes are outside of the scope of this plan. Although vital for the long-term resilience of the watershed, the broad land-use patterns, over-subscription of water withdrawals, and climate change that are causing chronic thermal issues in the watershed require more complex, coordinated, and resource-intensive solutions than this planning process can provide. This plan is intended to focus on the direct rehabilitation and prevention of localized, physical barriers to lateral thermal refugia and longitudinal connectivity to maintain fish passage to spawning, rearing, and refuge habitat. Lateral-- and associated thermal-- connectivity was identified by the planning team as the primary connectivity concern in the watershed within the defined scope of this plan.
 
-## Focal species {.unnumbered}
+## Focal Species {.unnumbered}
 
 Focal species represent the ecologically and culturally important species for which habitat connectivity is being conserved or restored in the watershed. In the Lower Nicola River watershed, the planning team selected anadromous salmonids as the focal guild, which comprises Chinook Salmon, Coho Salmon, and steelhead. The selection of these focal species was driven primarily by the focal species of the primary funds supporting this planning work. The planning team also identified other culturally and ecologically important species within the watershed to consider for inclusion in future iterations of the WCRP, including kokanee (*Oncorhynchus nerka*), Bull Trout (*Salvelinus confluentus*), Rainbow Trout (*Oncorhynchus mykiss*), Mountain Whitefish (*Prosopium williamsoni*), Lake Whitefish (*Coregonus clupeaformis*), Burbot (*Lota lota*), and Pink Salmon (*Oncorhynchus gorbuscha*).
 
