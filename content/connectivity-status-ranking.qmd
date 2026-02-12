@@ -115,7 +115,7 @@ data.set_table_styles(
 
 ```{python echo=FALSE}
 #| label: tbl-ranked
-#| tbl-cap: "Ranked Structures List"
+#| tbl-cap: "Habitat Accumulation Summary Table"
 #| warning: false
 #| echo: false
 
