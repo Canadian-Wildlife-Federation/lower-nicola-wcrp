@@ -111,7 +111,7 @@ data.set_table_styles(
    }])
 
 ```
-## Ranked Structures Table {.unnumbered}
+## Habitat Accumulation Summary Table {.unnumbered}
 
 ```{python echo=FALSE}
 #| label: tbl-ranked
