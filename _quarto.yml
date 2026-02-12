@@ -45,6 +45,7 @@ bibliography: references.bib
 
 format:
   html:
+    toc: false
     css: style.css
     theme: cosmo
     toc-title: "LNIC WCRP"

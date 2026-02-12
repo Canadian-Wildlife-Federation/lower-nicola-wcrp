@@ -14,8 +14,16 @@ In the Lower Nicola Watershed, # structures potentially disconnect Pacific Salmo
 
 
 ## Habitat Accumulation Curve {.unnumbered}
+```{r echo = FALSE}
+#| results: hide
+#| message: false
+#| warning: false
 
-![Figure 1: Habitat Accumulation Curve (HAC) showing structures in the Lower Nicola watershed as of x date. Structures are ranked based on how much (km) habitat is upstream to the next structure or set of structures and that would be reconnected if the structure(s) became passable. Sets of structures are indicated by a grey line below the curve, indicating that gains from addressing the downstream structure alone would be less than the combined gains from addressing all structures in the set. Habitat upstream of data-deficient structures is considered disconnected until field assessments are completed. Structures that were excluded as passable are not shown; however, rehabilitated barriers are shown to demonstrate the connectivity gains achieved through implementation of this plan. ](content/images/hac-lnic.png){fig-align="left"}
+source("content/Rscripts/create_HAC.R")
+plot_cumulative_avg_gain("content/data/combined_tracking_crossings_LNIC.csv")
+
+```
+![Figure 1: Habitat Accumulation Curve (HAC) showing structures in the Lower Nicola watershed as of x date. Structures are ranked based on how much (km) habitat is upstream to the next structure or set of structures and that would be reconnected if the structure(s) became passable. Sets of structures are indicated by a grey line below the curve, indicating that gains from addressing the downstream structure alone would be less than the combined gains from addressing all structures in the set. Habitat upstream of data-deficient structures is considered disconnected until field assessments are completed. Structures that were excluded as passable are not shown; however, rehabilitated barriers are shown to demonstrate the connectivity gains achieved through implementation of this plan. ](content/images/hac-lnic-test.png){fig-align="left"}
 
 ## Map {.unnumbered} 
 
