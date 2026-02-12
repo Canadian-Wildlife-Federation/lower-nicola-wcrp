@@ -4,13 +4,11 @@ project:
 
 book:
   title: "Lower Nicola Watershed Connectivity Restoration Plan: 2021 - 2040"
-  author: "Canadian Wildlife Federation"
-  date: last-modified
-  date-format: "DD-MM-YYYY"
   chapters:
     - index.qmd
     - content/project-overview.qmd
     - content/methods-definitions.qmd
+    - content/glossary.qmd
     - content/connectivity-status-ranking.qmd
     - content/work-planning.qmd
     - content/progress-reporting.qmd
@@ -19,14 +17,14 @@ book:
 
     - part: "Appendix A"
       chapters:
+        - content/non-actionable-barriers.qmd
+        - content/excluded-structures.qmd
+        
+    - part: "Appendix B"
+      chapters:
         - content/project-partners.qmd
         - content/data-methods.qmd
         - content/supplementary-information.qmd
-
-    - part: "Appendix B"
-      chapters:
-        - content/non-actionable-barriers.qmd
-        - content/excluded-structures.qmd
   
   sidebar: 
     pinned: true

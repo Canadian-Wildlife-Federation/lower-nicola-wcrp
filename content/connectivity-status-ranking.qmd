@@ -25,6 +25,38 @@ source("Rscripts/table_formatting.R")
 ## Current Connectivity Status {-}
 
 ```{python echo=FALSE}
+#| label: tbl-table16
+#| tbl-cap: "Rearing habitat connectivity gain requirements to meet WCRP goals in the Lower Nicola River watershed. The measures of currently accessible and total habitat values are derived from the intrinsic potential habitat model"
+#| warning: false
+#| echo: false
+
+# Variables to API calls
+connect = api.watershed_connectivity("ALL")[0]
+total = round(api.watershed_connectivity("ALL")[1],2) 
+access = round(api.watershed_connectivity("ALL")[2],2)
+gain = round((total*0.96)-access,2)
+
+# Data frame with table info
+df = pd.DataFrame({"Habitat Type":["Spawning and Rearing"],
+                   "Currently connected (km)":[str(access)],
+                   "Total (km)": [str(total)],
+                   "Current Connectivity Status":[str(connect)+"%"],
+                   "Goal": ["90%"],
+                   "Gain required (km)": [str(gain)]
+                   })
+                   
+# Apply table styling
+styled_df = df.style.hide().set_properties(**{'text-align': 'left'})
+# header styling
+table_styles = [{
+       'selector': 'th',
+       'props': [('background-color', '#008270'),('text-align', 'left')]
+   }]
+styled_df.set_table_styles(table_styles)
+
+```
+
+```{python echo=FALSE}
 #| warning: false
 #| echo: false
 
@@ -89,13 +121,13 @@ data.set_table_styles(
 
 df = api.GetTrackingTableData()
 
-tableColumns = ['barrier_id','internal_name','structure_list_status','rank_total_upstr_hab','avg_gain_per_barrier','priority', 'next_steps']
+tableColumns = ['barrier_id','internal_name','structure_list_status','rank_total_upstr_hab','avg_gain_per_barrier','priority', 'next_steps', 'include_in_hac']
 
 
 filtered_df = (
     df
       .loc[
-          df['structure_list_status'].notna(),
+          df['include_in_hac'] == 'yes',
           tableColumns
       ]
       .sort_values('avg_gain_per_barrier', ascending=False)
@@ -108,7 +140,8 @@ display_df = filtered_df.rename(columns={
     'rank_total_upstr_hab': 'Upstream Habitat Rank',
     'avg_gain_per_barrier': 'Avg Habitat Gain',
     'priority': 'Priority',
-    'next_steps': 'Next Steps'
+    'next_steps': 'Next Steps',
+    'include_in_hac': 'HAC'
 })
 
 
@@ -125,7 +158,7 @@ data.set_table_styles(
 ```
 ## Habitat Accumulation Curve {.unnumbered}
 
-![Figure 1: Habitat Accumulation Curve (HAC) showing structures in the Lower Nicola watershed as of x date. Structures are ranked based on how much (km) habitat is upstream to the next structure or set of structures and that would be reconnected if the structure(s) became passable. Sets of structures are indicated by a grey line below the curve, indicating that gains from addressing the downstream structure alone would be less than the combined gains from addressing all structures in the set. Habitat upstream of data-deficient structures is considered disconnected until field assessments are completed. Structures that were excluded as passable are not shown; however, rehabilitated barriers are shown to demonstrate the connectivity gains achieved through implementation of this plan. ](images/hac-lnic.png){fig-align="left"}
+![Figure 1: Habitat Accumulation Curve (HAC) showing structures in the Lower Nicola watershed as of x date. Structures are ranked based on how much (km) habitat is upstream to the next structure or set of structures and that would be reconnected if the structure(s) became passable. Sets of structures are indicated by a grey line below the curve, indicating that gains from addressing the downstream structure alone would be less than the combined gains from addressing all structures in the set. Habitat upstream of data-deficient structures is considered disconnected until field assessments are completed. Structures that were excluded as passable are not shown; however, rehabilitated barriers are shown to demonstrate the connectivity gains achieved through implementation of this plan. ](images/hac-lnic-test.png){fig-align="left"}
 
 ## Map {.unnumbered}
 
