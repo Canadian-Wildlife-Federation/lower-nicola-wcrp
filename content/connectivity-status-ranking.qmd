@@ -120,7 +120,6 @@ data.set_table_styles(
 #| echo: false
 
 df = api.GetTrackingTableData()
-
 tableColumns = ['barrier_id','internal_name','structure_list_status','rank_total_upstr_hab','avg_gain_per_barrier','priority', 'next_steps', 'include_in_hac']
 
 
@@ -143,7 +142,9 @@ display_df = filtered_df.rename(columns={
     'next_steps': 'Next Steps',
     'include_in_hac': 'HAC'
 })
-
+display_df['Upstream Habitat Rank'] = display_df['Upstream Habitat Rank'].astype(int)
+display_df['Avg Habitat Gain'] = display_df['Avg Habitat Gain'].map("{:.2f}".format)
+display_df['Avg Habitat Gain'].dtype
 
 data = display_df.style.hide().set_properties(**{'text-align': 'left'})
 

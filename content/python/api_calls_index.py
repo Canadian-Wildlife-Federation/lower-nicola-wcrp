@@ -90,7 +90,7 @@ def confirmed_barriers(rawDF):
         priorityDF.sort_values(by=['total_hab_gain_set'], ascending=False, inplace=True)
 
         priorityDF = capitalize_and_clean_columns(priorityDF)
-        priorityDF.to_csv('data/confirmed_barriers.csv', index=False)
+
         return priorityDF
 #grabs assessed data deficient structures
 def assessedStrucDD(rawDF):
@@ -106,7 +106,7 @@ def assessedStrucDD(rawDF):
         priorityDF.sort_values(by=['total_hab_gain_set'], ascending=False, inplace=True)
 
         priorityDF = capitalize_and_clean_columns(priorityDF)
-        priorityDF.to_csv('data/assessed_strucDD.csv', index=False)
+
         return priorityDF
 
 #grabs rehabilitated structures
@@ -125,7 +125,7 @@ def RehabilitatedBarriers(rawDF):
         priorityDF.sort_values(by=['total_hab_gain_set'], ascending=False, inplace=True)
 
         priorityDF = capitalize_and_clean_columns(priorityDF)
-        priorityDF.to_csv('data/rehabilitated_barriers.csv', index=False)
+
         return priorityDF
 
 #grabs non-actionable structures
@@ -140,7 +140,7 @@ def nonActionable_barriers(rawDF):
         priorityDF = priorityDF.drop(columns=['structure_list_status', 'priority'])
 
         priorityDF = capitalize_and_clean_columns(priorityDF)
-        priorityDF.to_csv('data/nonactionable_barriers.csv', index=False)
+
         return priorityDF
 
 #grabs excluded strucutures
@@ -156,7 +156,7 @@ def ExcludedStructures(rawDF):
         priorityDF = priorityDF.drop(columns=['structure_list_status'])
 
         priorityDF = capitalize_and_clean_columns(priorityDF)
-        priorityDF.to_csv('data/excluded_structures.csv', index=False)
+
         return priorityDF
 
 def GetTrackingTableData():

@@ -1,6 +1,46 @@
 # Project Overview {.unnumbered}
 
 
+```{python}
+#| include: false
+#| label: setup
+#| echo: false
+#| warning: false
+
+
+from content.python import api_calls_index as apiCalls
+
+
+connect = apiCalls.connect
+total = apiCalls.total
+access = apiCalls.access
+gain = apiCalls.gain
+disconnect = total - access
+count_addStruc = apiCalls.count_addStruc
+count_excludedStruc = apiCalls.count_excludedStruc
+count_nonactionStruc = apiCalls.count_nonactionStruc
+count_rehabilitatedStruc =apiCalls.count_rehabilitatedStruc
+
+
+```
+
+```{r}
+#| echo: false
+#| warning: false
+library(reticulate)
+access <- py$access
+connect <-py$connect
+total <- py$total
+gain <- py$gain
+disconnect <- py$disconnect
+count_addStruc <- py$count_addStruc
+
+count_nonactionStruc <- py$count_nonactionStruc
+count_rehabilitatedStruc <- py$count_rehabilitatedStruc
+count_totalBar <- count_addStruc+count_nonactionStruc+count_rehabilitatedStruc
+
+```
+
 ## Purpose {.unnumbered}
 
 The purpose of the Watershed Connectivity Restoration Plan (WCRP) is to systematically identify and assess potential barriers to salmon migration in the Lower Nicola Watershed. By conducting both desktop and field assessments, the project aims to evaluate the extent of migration barriers caused by manmade structures and identify opportunities for increasing connectivity for salmonid species. This assessment will guide the prioritization of barriers for remediation, ensuring that the most impactful sites are addressed first to enhance salmon habitat and improve migration conditions.
@@ -8,9 +48,9 @@ The purpose of the Watershed Connectivity Restoration Plan (WCRP) is to systemat
 
 ## Current Connectivity Status {.unnumbered}
 
-In the Lower Nicola watershed,  km of Pacific Salmon habitat are currently connected to the ocean and #km is disconnected from it. This represents that % of the # km of total habitat is connected.
+In the Lower Nicola watershed, `r access` km of Pacific Salmon habitat are currently connected to the ocean and `r disconnect` km is disconnected from it. This represents that `r connect`% of the `r total` km of total habitat is connected.
 
-In the Lower Nicola Watershed, # structures potentially disconnect Pacific Salmon habitat. Of these, # are identified as barriers in need of rehabilitation (priority barriers), # barriers that do not warrant rehabilitation (non-actionable), and # require further field assessment.
+In the Lower Nicola Watershed, `r count_totalBar` structures potentially disconnect Pacific Salmon habitat. Of these, `r count_rehabilitatedStruc` are identified as barriers in need of rehabilitation (priority barriers), `r count_nonactionStruc` barriers that do not warrant rehabilitation (non-actionable), and `r count_addStruc` require further field assessment.
 
 
 ## Habitat Accumulation Curve {.unnumbered}
