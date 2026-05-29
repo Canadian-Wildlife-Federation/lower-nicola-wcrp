@@ -1,14 +1,24 @@
 # Appendix B – Partners and Detailed Methods  {-}
 
 ## Partners   {-}
-Table 13: Lower Nicola River WCRP Planning Team members. Planning Team members contributed to the development of this plan by participating in scoping and planning meetings, and reviewing documents and data. 
-Table 14: 
+
 ```{r echo = FALSE}
-#| label: table-6
-#| tbl-cap: "Tuzist’ol T’ah WCRP working group. Working group members contributed to the development of this plan by participating in scoping and planning meetings, and reviewing documents and data."
+#| label: table-13
+#| tbl-cap: "Table 13: Lower Nicola River WCRP Planning Team members. Planning Team members contributed to the development of this plan by participating in scoping and planning meetings, and reviewing documents and data."
 #| warning: false
 source("Rscripts/table_formatting.R")
-data <- read.csv("data/table6.csv", check.names=FALSE)
+data <- read.csv("data/table13.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
+```
+
+```{r echo = FALSE}
+#| label: table-14
+#| tbl-cap: "Table 14: Lower Nicola River WCRP Planning Team members. Planning Team members contributed to the development of this plan by participating in scoping and planning meetings, and reviewing documents and data."
+#| warning: false
+source("Rscripts/table_formatting.R")
+data <- read.csv("data/table14.csv", check.names=FALSE)
 ft <- flextable(data)
 ft <- format_flextable(ft)
 ft

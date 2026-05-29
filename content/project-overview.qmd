@@ -35,7 +35,7 @@ Model outputs include an estimate of the current connectivity status along with 
 
 Diffuse natural barriers that make entire areas impassible are not included in the models but may be used to define the scope of this WCRP. For example, a naturally impassable waterfall that prevents access to high-quality habitat would be excluded from the model. A tributary that is inhospitable because of increased water temperature may also be excluded from the overall spatial scope of the WCRP because restoration needs there are broader than connectivity.
 
-Figure 4: Geographic scope of the Lower Nicola River Watershed Connectivity Restoration Plan for Pacific salmon and steelhead in British Columbia.   
+![Figure 4: Geographic scope of the Lower Nicola River Watershed Connectivity Restoration Plan for Pacific salmon and steelhead in British Columbia.](images/Figure4.png){fig-cap-location="top"}
 
 
 
@@ -54,26 +54,87 @@ Anadromous salmonid populations in the Lower Nicola River watershed have decline
 ### Chinook Salmon | k’ʷy’íʔe/pəqéłus | Oncorhynchus tshawytscha {-}
 Chinook Salmon are one of the first species to return to the watershed each year, arriving as early as May, and the population has been in decline since the mid-1990s (LGL Ltd. 2007, Ecoscape 2017). Known and historic spawning locations include the mainstem Nicola River (mostly between the Coldwater River and Spius Creek confluences), Coldwater River, Spius Creek, lower portions of Clapperton Creek, and upstream of Nicola Lake in Moore Creek and the Upper Nicola River (LGL Ltd. 2007, Ecoscape 2017, PSF 2025). In addition to these spawning systems, important juvenile rearing areas have been observed in Juliet Creek and Voght Creek (LGL Ltd. 2007). Chinook Salmon stocks have been supplemented by the Spius Creek hatchery since the 1980s. Fry and smolt releases have occurred and the Nicola stock is current enhanced by ~200,000 coded-wire tagged yearling smolts annually as a component of the Pacific Salmon Commission indicator stock study program (R. Bailey, pers. comm.). 
 
-Table 1. Chinook Salmon (Oncorhynchus tschawytscha) Designated Unit assessment in the Lower Nicola River watershed. Assessments undertaken by the Committee on the Status of Endangered Wildlife in Canada (2020a).  
+```{r tbl1, echo = FALSE, results = 'asis'}
+#| label: tbl-1
+#| tbl-cap: "Table 1. Chinook Salmon (Oncorhynchus tschawytscha) Designated Unit assessment in the Lower Nicola River watershed. Assessments undertaken by the Committee on the Status of Endangered Wildlife in Canada (2020a)."
+#| warning: false
+#| echo: false
+source("Rscripts/table_formatting.R")
+library("flextable")
+
+data <- read.csv("data/table1.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
+```
 
 
 ### Coho Salmon | sx̣a̓yqs | Oncorhynchus kisutch   {-}
 Coho Salmon begin to return to the watershed in September, with spawning beginning in late October and continuing through December. The population has been in decline since the mid-1980s (Fisheries and Oceans Canada 1991, Ecoscape 2017). Coho Salmon stocks have been supplemented in recent decades by outplants from the Spius Creek Hatchery (Ecoscape 2017). The majority of Coho Salmon spawning and rearing occurs in the Coldwater River, Spius Creek, and Maka Creek, but has also been observed in Clapperton Creek, Prospect Creek, and the Upper Nicola River and Moore Creek (LGL Ltd. 2007, PSF 2025). The lower reaches of many smaller tributaries are also important Coho Salmon rearing habitat. 
+```{r tbl2, echo = FALSE, results = 'asis'}
+#| label: tbl-2
+#| tbl-cap: "Table 2. Coho Salmon (Oncorhynchus kisutch) Designated Unit assessment in the Lower Nicola River watershed. Assessments undertaken by the Committee on the Status of Endangered Wildlife in Canada (2016)."
+#| warning: false
+#| echo: false
+source("Rscripts/table_formatting.R")
+library("flextable")
 
-Table 2. Coho Salmon (Oncorhynchus kisutch) Designated Unit assessment in the Lower Nicola River watershed. Assessments undertaken by the Committee on the Status of Endangered Wildlife in Canada (2016).  
+data <- read.csv("data/table2.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
+```
 
 
 ### Steelhead | cóʕʷłeʔ | Oncorhynchus mykiss   {-}
 Steelhead join Chinook Salmon as the first to appear in the watershed, arriving in the spring (LGL Ltd. 2007). The population is critically endangered and is seen as an extreme conservation concern (Bos 2006). Steelhead spawning and rearing is known to occur in the lower portion of the mainstem Nicola River, Skuhun Creek, Shakan Creek, Nuaitch Creek, Maka Creek, the Coldwater River, Juliet Creek, Voght Creek, Prospect Creek, and Clapperton Creek (LGL Ltd. 2007). Historically, almost all third-order and greater streams would have supported steelhead, and groundwater-fed thermal refugia continue to provide important rearing and holding habitats (Ecoscape 2017). 
+```{r tbl3, echo = FALSE, results = 'asis'}
+#| label: tbl-3
+#| tbl-cap: "Table 3. Steelhead (Onchorhynchus mykiss) Designated Unit assessment in the Lower Nicola River watershed. Assessments undertaken by the Committee on the Status of Endangered Wildlife in Canada (2020b)."
+#| warning: false
+#| echo: false
+source("Rscripts/table_formatting.R")
+library("flextable")
 
-Table 3. Steelhead (Onchorhynchus mykiss) Designated Unit assessment in the Lower Nicola River watershed. Assessments undertaken by the Committee on the Status of Endangered Wildlife in Canada (2020b).  
+data <- read.csv("data/table3.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- format_flextable(ft)
+ft
+```
 
 
 ## Barrier Types {-}
 
 The following table highlights barrier types threatening anadromous salmonids in the watershed. The results of this assessment were used to inform the subsequent planning steps, as well as to identify knowledge gaps where there are limited spatial data to inform the assessment for a specific barrier type. 
+```{r tbl4, echo = FALSE, results = 'asis'}
+#| label: tbl4
+#| tbl-cap: 'Table 4. Barrier types in the Lower Nicola River watershed and barrier rating assessment results. For each barrier type listed, "Extent" refers to the proportion of anadromous salmonid habitat that is being blocked by that barrier type, "Severity" is the proportion of structures for each barrier type that are known to block passage for focal species based on field assessments, and "Irreversibility" is the degree to which the effects of a barrier type can be reversed and connectivity restored. The amount of habitat blocked used in this exercise is a representation of total amount of combined thermal refuge, spawning, and rearing habitat.'
+#| warning: false
+#| echo: false
+source("Rscripts/table_formatting.R")
+library("flextable")
 
-Table 4. Barrier types in the Lower Nicola River watershed and barrier rating assessment results. For each barrier type listed, "Extent" refers to the proportion of anadromous salmonid habitat that is being blocked by that barrier type, "Severity" is the proportion of structures for each barrier type that are known to block passage for focal species based on field assessments, and "Irreversibility" is the degree to which the effects of a barrier type can be reversed and connectivity restored. The amount of habitat blocked used in this exercise is a representation of total amount of combined thermal refuge, spawning, and rearing habitat. 
+data <- read.csv("data/table4.csv", check.names=FALSE)
+ft <- flextable(data)
+
+rating_fill <- function(x) {
+  ifelse(
+    x == "Very High", "#ff0000",
+    ifelse(
+      x == "High", "#ffff00",
+      ifelse(
+        x == "Medium", "#92d050",
+        ifelse(x == "Low", "#008000", NA_character_)
+      )
+    )
+  )
+}
+
+ft <- bg(ft, j = c("Extent", "Severity", "Irreversibility", "Overall Threat Rating"),
+         bg = rating_fill, part = "body")
+ft <- format_flextable(ft)
+ft
+```
 
 
 ### Lateral Barriers (including to thermal connectivity)   {-}
