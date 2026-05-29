@@ -1,43 +1,18 @@
-# Work Planning 
+# Work Planning {-}
 
-## Annual Progress Report {.unnumbered}
+## Structure Ranking Context {-}
 
-The Lower Nicola Indian Band, Nooaitch Band, and Scw’exmx Tribal Council completed in-depth barrier assessments and habitat confirmations at several sites (Stumbles, Kwinshatin, Brook, Murray Lake, Midday creeks). In addition, initial results from CWF’s drone imagery project to identify thermal refugia were developed and reviewed at a working group meeting with program partners in 2023.
+Structures are primarily ranked to inform field-assessment planning. Higher-ranked structures contribute greater potential toward habitat connectivity restoration and are therefore typically higher priorities for field assessment. They also represent key knowledge gaps with potential to significantly affect model results. Estimates of current connectivity status could improve considerably, for instance, if many high-ranking structures are passable or do not have habitat upstream. Habitat accumulation curves support decision making around how many and which structures should be assessed, by showing which structures may only minimally affect connectivity. High-ranked structures with minimal habitat upstream may be located low on these curves, because they must be addressed before benefits can be achieved by addressing lower-ranked barriers with more upstream habitat. 
 
-## Annual Work Plan {.unnumbered}
+If confirmed as barriers, high-ranking structures are also often priorities for further field assessments to confirm upstream habitat before decisions are made about where fish passage should be rehabilitated.  
 
-```{r params, echo = FALSE, results = 'asis'}
-#| label: tbl-param
-#| tbl-cap: "2023 work plan for the Lower Nicola Watershed."
-#| warning: false
+Once field assessments are completed, management decisions are made for each assessed structure. An assessed structure may be excluded from the model if it is passable or there is no habitat upstream, or it may be listed as a priority barrier for fish-passage rehabilitation. Alternatively, some structures confirmed as barriers may be considered “non-actionable” because the amount and quality of habitat upstream may be low and the costs of rehabilitation may be high relative to those limited potential benefits. 
 
-library("flextable")
+Model ranks provide only limited information on the relative value of rehabilitation among priority barriers. Ranks convey only the relative amount of habitat upstream and do not represent other factors relevant to restoration prioritization, such as habitat quality, cost, social priorities, or logistical constraints and opportunities. Deciding which priority barriers to address first is a social decision-making process that is only partially informed by model outputs. Model outputs also provide broader context about how many structures exist in the system, how many have been identified as priority barriers, and how much habitat is upstream of each relative to others. 
 
-data <- read.csv("data/work-plan.csv", check.names=FALSE)
-ft <- flextable(data)
-ft <- bg(ft, bg = "#008270", part = "header")
-ft <- color(ft, color = "white", part = "header")
-ft <- set_caption(ft)
-ft <- width(ft, width = 1)
-ft 
-```
 
-## Operational Plan {.unnumbered}
+## Workplan {-}
 
-The operational plan represents a preliminary exercise undertaken by the planning team to identify the potential leads, potential participants, and estimated cost for the implementation of each action in the Lower Nicola River watershed. @tbl-keyact summarizes individuals, groups, or organizations that the planning team felt could lead or participate in the implementation of the plan and should be interpreted as the first step in ongoing planning and engagement to develop more detailed and sophisticated action plans for each entry in the table. The individuals, groups, and organizations listed under the "Lead(s)", or "Potential Participants" columns are those that provisionally expressed interest in participating in one of those roles or were suggested by the planning team for further engagement (denoted in bold), for those that are not members of the planning team. The leads, participants, and estimated costs in the operational plan are not binding nor an official commitment of resources; but rather provide a roadmap for future coordination and engagement during the WCRP implementation.
+The 2026-2027 work plan is currently being determined. This section will be updated once finalized. 
 
-```{r params, echo = FALSE, results = 'asis'}
-#| label: opp-plan
-#| tbl-cap: "2023 operational plan for the Lower Nicola Watershed."
-#| warning: false
 
-library("flextable")
-
-data <- read.csv("data/operational-plan.csv", check.names=FALSE)
-ft <- flextable(data)
-ft <- bg(ft, bg = "#008270", part = "header")
-ft <- color(ft, color = "white", part = "header")
-ft <- set_caption(ft)
-ft <- width(ft, width = 1)
-ft 
-```
