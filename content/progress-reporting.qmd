@@ -1,0 +1,76 @@
+# Progress Reporting {-}
+
+## Progress Summary {-}
+
+This WCRP was initiated in 2020 with a series of workshops completed with local partners and rightsholders, and the first version of this WCRP was published in 2021. Since inception, the passability of 67 structures has been assessed, and further habitat assessments were completed at 7 of these. Fish passage has been rehabilitated at 4 barriers: Skuhun Creek mouth and Highway 8 crossings, Clapperton Creek dam, and Murray Lake Creek at Maka-Murray/Maka-Michael FSR junction. This has resulted in improved or restored access to 19.86 km of habitat. 
+
+Some lateral habitat and thermal refugia investigations were also completed as part of this WCRP process; however, other groups active in the Lower Nicola have both pioneered and advanced this work beyond what was completed and reported upon here: In 2021, the Lower Nicola River watershed and many other parts of B. C. experienced devastating forest fires and floods. Prior to this, CWF worked with the Scw’exmx Tribal Council to assess high-ranking structures and undertake preliminary assessments of potential lateral barriers identified by local experts and knowledge holders. Much of the mainstem Coldwater River and Lower Nicola River was rearranged during the flood, and information gathered during the 2021 field assessment rendered obsolete. Recognizing that there may be other urgent restoration priorities in the watershed, the Planning Team decided that the areas of focus over the short term would be on reviewing LiDAR (light detection and ranging) and aerial imagery to develop a conceptual method for identifying thermal refugia using remote sensing technologies, focusing on the portion of the Lower Nicola River mainstem upstream of the Coldwater River, which had not been highly impacted by the floods. Since this time, intensive remote sensing and ground truthing has been undertaken by others in the watershed, including the Nooaitch Band with funding from the B. C. Ministry of Transportation and Transit, and Raincoast Conservation Foundation. To avoid duplicating efforts, longitudinal connectivity has since become the primary focus of this plan.  
+
+
+## Rehabilitated Barriers {-}
+```{r tbl8, echo = FALSE, results = 'asis'}
+#| label: table-8
+#| tbl-cap: "Table 8: Barriers to Pacific salmon and steelhead in the Lower Nicola River that have been addressed (either through removal, replacement, or modification to improve passage) as of May 2026. Habitat gain columns represent the amount (km) of upstream spawning or rearing habitat that was reconnected by these projects."
+#| echo: false
+source("Rscripts/table_formatting.R")
+library("flextable")
+
+data <- read.csv("data/rehab_LNIC.csv", check.names=FALSE)
+ft <- flextable(data)
+ft <- set_header_labels(   
+  ft, 
+    'aggregated_crossings_id' = 'Barrier ID',
+    'internal_name' = 'Site Name',
+    'watershed_group_code' = 'Watershed Name',
+    'type_of_rehabilitation' = 'Type of Rehabilitation',
+    'rehabilitated_by' = 'Rehabilitated By',
+    'rehabilitated_date' = 'Rehabilitated Date',
+    'all_spawningrearing_belowupstrbarriers_km' = 'Habitat Gain (km)*',
+    'actual_project_cost_$' = 'Actual Project Cost ($)',
+    'next_steps' = 'Next Step',
+    'notes' = 'Notes',
+    'supporting_links' = 'Supporting Links'
+)
+ft <- format_flextable(ft)
+ft
+```
+
+
+## Annual Progress Report {-}
+
+Since April 2025, the following actions were completed:  
+
+- Results of barrier assessments, habitat confirmations, and habitat investigations of Lower Nicola River tributaries were reviewed by the Planning Team and a team meeting held to discuss next steps for streams and structures based on field findings.  
+
+- The connectivity models were updated to remove habitat from streams where field investigations revealed that habitat was not suitable for focal species, and to add spawning habitat to areas where spawning was observed and not captured by the model (primarily in Stumbles and Murray Lake creeks).  
+
+- Outputs were incorporated into this WCRP. 
+
+
+## Priority Barriers {-}
+```{r tbl9, echo = FALSE, results = 'asis'}
+#| label: table-9
+#| tbl-cap: "Table 9: Structures in the Lower Nicola River that are confirmed as barriers to fish passage for Pacific salmon and steelhead with confirmed habitat upstream, as of May 2026. Barriers known to be partially passable are indicated by “yes”, with further details provided in the adjacent column. Habitat gain represents the amount (km) of habitat upstream of that barrier to the next structure that will be if that barrier is addressed. The number of structures in a set represents the number of structures that must be addressed concurrently to maximize habitat connectivity."
+#| echo: false
+source("Rscripts/table_formatting.R")
+library("flextable")
+
+data <- read.csv("data/prio_LNIC.csv", check.names=FALSE)
+
+ft <- flextable(data)
+ft <- set_header_labels(   
+  ft,
+    'barrier_id' = 'Barrier ID',
+    'internal_name' = 'Site Name',
+    'watershed_group_code' = 'Watershed Name',
+    'structure_owner' = 'Structure Owner',
+    'structure_type' = 'Structure Type',
+    'partial_passability' = 'Partial Passability',
+    'partial_passability_notes' = 'Partial Passability Details',
+    'num_barriers_set' = 'Number of Structures in Set',
+    'all_spawningrearing_belowupstrbarriers_km' = 'Habitat Gain (km)*',
+    'next_steps' = 'Next Step'
+  )
+ft <- format_flextable(ft)
+ft
+```

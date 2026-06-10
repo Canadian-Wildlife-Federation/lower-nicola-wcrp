@@ -1,0 +1,7 @@
+Barrier Type,Extent,Severity,Irreversibility,Overall Threat Rating
+Lateral barriers (including to thermal connectivity),High,Very High,Medium,High
+Natural barriers,High,Very High,Medium,High
+Road-stream crossings,High,Very High,Low,Medium
+Small Dams (<5 m height),Low,Very High,Medium,Low
+Abandoned rail-stream crossings (longitudinal),Low,Low,Medium,Low
+Trail-stream Crossings,Low,Low,Low,Low
