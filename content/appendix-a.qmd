@@ -34,7 +34,6 @@ ft
 
 
 ## Excluded Structures {-}
-Table 12: Structures in Lower Nicola River watershed that are excluded from further consideration in subsequent ranking and work planning because the structure is not present, is confirmed passable (e.g., bridge), or has no habitat upstream for Pacific salmon or steelhead.  
 
 ```{r table12, echo = FALSE, results = 'asis'}
 #| label: table-12
